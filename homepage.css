@@ -18,13 +18,17 @@ header{
     padding: 20px;
 }
 
+.navbar{
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
 nav{
     display: flex;
     align-items: center;
 }
 
 .logo{
-    margin-left: 50px;
     font-size: 20px;
     font-weight: 700;
     margin-right: 50px;
@@ -69,9 +73,67 @@ a{
     align-items: center;
 }
 .menu{
-    margin-right: 10px;
     width: 30px;
     height: 30px;
     border-radius: 50%;
     background-color: #fff;
+}
+
+.city-container{
+    display: flex;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    margin-top: 5rem;
+    justify-content: center;
+}
+
+.city-content{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.city-head{
+    text-align: left;
+}
+
+.cities{
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-rows: 120px 120px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.city{
+    display: flex;
+    border: 2px solid black;
+    padding: 10px;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.city-image{
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.city-name{
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.view-more{
+    text-align: center;
+}
+
+.more-cities{
+    text-decoration: none;
+    color: rgb(0, 170, 255);
+    font-weight: 500;
 }
