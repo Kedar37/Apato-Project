@@ -11,17 +11,16 @@ body{
 }
 
 header{
-    height: 80px;
+    max-height: 5rem;
     width: 100%;
     background-color: rgb(113, 146, 113);
-    padding: 20px;
+    padding: 1rem;
     z-index: 100;
     margin: 0;
 }
 
 .navbar{
-    margin-left: 40px;
-    margin-right: 40px;
+    margin: 0 2rem;
 }
 
 nav{
@@ -30,42 +29,50 @@ nav{
 }
 
 .logo{
-    font-size: 20px;
-    font-weight: 700;
-    margin-right: 50px;
-    color: #fff;
+    margin-right: 3rem;
+}
+
+.web-logo{
+    height: 3rem;
+    width: 3rem;
+    background-color: white;
+    border-radius: 5px;
 }
 
 nav a{
-    margin-right: 20px;
+    margin-right: 1.5rem;
     list-style: none;
     text-decoration: none;
     color: #fff;
 }
 
-.filter-icon{
-    width: 30px;
-    height: 30px;
+button.filter-icon{
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
-    margin-right: 10px;
+    margin-right: 1rem;
     background-color: #fff;
 }
 
+button.filter-icon:hover{
+    background-color: #e0ffda;
+}
+
 .profile{
-    width: 30px;
-    height: 30px;
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
-    margin-right: 10px;
+    margin-right: 1rem;
     background-color: #fff;
 }
 
 .search-bar{
-    padding: 10px;
-    width: 300px;
+    padding: 0.5rem;
+    width: 20rem;
     border: 2px solid lightgrey;
     outline: none;
-    margin-right: 10px;
-    border-radius: 10px;
+    margin-right: 1rem;
+    border-radius: 0.5rem;
 }
 
 .icons{
@@ -74,11 +81,25 @@ nav a{
     align-items: center;
 }
 
-.menu{
-    width: 30px;
-    height: 30px;
+button.menu{
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: transparent;
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        margin-right: 20px;
+    }
+
+    nav a {
+        margin-right: 10px;
+    }
+
+    .search-bar {
+        width: 100px;
+    }
 }
 
 .banner-section{
@@ -318,6 +339,7 @@ button{
 
 .city-container{
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     height: auto;
     margin-top: 2rem;
@@ -326,6 +348,7 @@ button{
 }
 
 .city-content{
+    margin: 0 5rem;
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -335,17 +358,17 @@ button{
 }
 
 .cities{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 150px 150px;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    margin-bottom: 30px;
-    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 3rem;
 }
 
 .city{
-    display: flex;
+    display: grid;
+    grid-template-columns: 120px 90px;
+    grid-column-gap: 7px;
     border: 2px solid black;
     padding: 10px;
     align-items: center;
@@ -366,6 +389,7 @@ button{
 }
 
 .view-more{
+    margin-top: 1.5rem;
     text-align: center;
 }
 
@@ -386,6 +410,7 @@ button{
 
 .tip-content{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -393,6 +418,13 @@ button{
     border: 2px solid rgb(48, 87, 48);
     border-radius: 10px;
     margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .tip-image{
+        margin-top: 1.5rem;
+        margin-left: 1px;
+    }
 }
 
 .tip-head{
@@ -417,7 +449,7 @@ button{
 }
 
 .tip-image{
-    margin-left: 40px;
+    margin-left: 2.5rem;
 }
 
 .tip-img{
@@ -455,12 +487,16 @@ footer{
     height: 120px;
     object-fit: cover;
     border-radius: 10px;
-    border: 2px solid white;
-    margin-bottom: 20px;
+    background-color: white;
+    margin-bottom: 10px;
 }
 
-.sns1{
+button.sns1{
+    width: 2rem;
+    height: 2rem;
     margin: 0 3px;
+    border-radius: 50%;
+    background-color: white;
 }
 
 .snslinks{

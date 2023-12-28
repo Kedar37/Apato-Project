@@ -2,7 +2,7 @@ const sliderbtn = document.querySelectorAll('.sliderbtn');
 
 sliderbtn.forEach(btn => {
     btn.addEventListener('click', () => {
-        let offset = btn.dataset.sliderBtn === 'next'?1:-1;
+        let offset = btn.dataset.slideBtn === 'next'?1:-1;
 
         let cardslide = btn.closest("[data-slide]").querySelector("[livecardslide]");
         let sliderpos = btn.closest("[data-slide]").querySelector("[sliderposwraps]");
