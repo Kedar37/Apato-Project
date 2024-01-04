@@ -17,10 +17,12 @@ header{
     padding: 1rem;
     z-index: 100;
     margin: 0;
+    position: fixed;
 }
 
 .navbar{
     margin: 0 2rem;
+    z-index: 100;
 }
 
 nav{
@@ -81,11 +83,38 @@ button.filter-icon:hover{
     align-items: center;
 }
 
-button.menu{
+button.menubtn{
+    cursor: pointer;
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
     background-color: transparent;
+}
+
+ul.menulists{
+    list-style: none;
+    margin-top: 4rem;
+    animation: slide-down 0.5s ease-out;
+}
+
+ul.menulists>li{
+    text-align: center;
+    padding: 15px;
+    background: #1f5131;
+    border-bottom: 1px solid #3b7951;
+    cursor: pointer;
+}
+ul.menulists>li:hover {
+    background: #245e39;
+}
+
+@keyframes slide-down {
+    0%{
+        transform: translateY(-5%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -100,6 +129,10 @@ button.menu{
     .search-bar {
         width: 100px;
     }
+}
+
+body>main{
+    margin-top: 4rem;
 }
 
 .banner-section{
@@ -194,147 +227,81 @@ img{
     display: none;
 }
 
-.card-section{
-    margin-top: 2rem;
-    width: auto;
+.cards{
+    display: grid;
+    grid-auto-flow: column;
+    overflow-x: scroll;
     height: auto;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid #000;
+    padding: 1rem 3rem;
 }
 
-.sliderwrapper{
-    overflow: hidden;
-    width: 100%;
-    height: 450px;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-}
-
-button{
-    width: auto;
-    height: auto;
-    border-radius: 50%;
-    outline: none;
-    border: none;
-    background-color: #fff;
-}
-
-.sliderbtn{
-    background-color: lightgray;
-    padding: 1rem;
+.btn {
+    width: 40px;
+    height: 40px;
     cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    padding: 1rem;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 28%;
     z-index: 1;
+    background-color: transparent;
 }
 
-.sliderbtn.prev{
+.prev{
     left: 1rem;
 }
 
-.sliderbtn.next{
+.next{
     right: 1rem;
 }
 
-.prev-btn{
-    width: 10px;
-    height: 10px;
-    object-fit: cover;
-}
-
-.next-btn{
-    width: 10px;
-    height: 10px;
-    object-fit: cover;
-}
-
-.slider-pos-wrapper{
-    list-style: none;
-    display: flex;
-    position: relative;
-    justify-content: center;
-    z-index: 1;
-    top: 400px;
-}
-
-.slider-pos{
-    width: 20px;
-    height: 20px;
-    border: 1px solid cyan;
-    border-radius: 50%;
-    margin: 0 5px;
-}
-
-.slider-pos[data-active] {
-    background-color: rgb(0, 0, 0);
-}
-
-.card-slides{
-    align-items: center;
-}
-
-.liveslide{
-    width: 100%;
-    height: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .card{
-    width: 300px;
-    height: auto;
-    background-color: #f0f0f0;
-    border-radius: 7px;
-    overflow: hidden;
-    margin-left: 40px;
+    width: auto;
+    display: grid;
+    grid-template-columns: 250px 150px;
+    grid-column-gap: 1rem;
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 1rem;
+    margin-right: 1rem;
 }
 
-.card img{
+.card-img{
     width: 100%;
     height: auto;
+}
+
+.card-image{
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .card-content{
-    padding: 15px;
-    display: flex;
-    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
 }
 
-.card-content h3{
-    font-size: 20px;
-    margin-bottom: 8px;
-    text-align: center;
+h4.card-head{
+    margin-bottom: 1rem;
 }
 
-.card-content p{
-    font-size: 15px;
-    color: grey;
+p.card-price{
+    margin-bottom: 1rem;
 }
 
-.card-content button{
-    padding: 10px;
-    text-align: center;
+button.card-btn{
+    width: 150px;
     border: none;
-    outline: none;
-    background-color: cyan;
-    color: black;
-    font-weight: 500;
-    margin-top: 15px;
+    padding: 1rem;
+    color: white;
+    font-weight: 600;
+    border-radius: 7px;
+    background-color: rgb(26, 67, 47);
     cursor: pointer;
-    border-radius: 5px;
-}
-
-.card-content button:hover{
-    background-color: rgb(2, 91, 91);
-    color: #fff;
-}
-
-.liveslide:not([data-active]) {
-    display: none;
 }
 
 .city-container{

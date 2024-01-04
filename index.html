@@ -21,8 +21,14 @@
                     <button class="filter-icon"><i class="fa-solid fa-filter" style="color: #1f5131;"></i></button>
                     <input type="search" placeholder="search" class="search-bar">
                     <img src="" class="profile" alt="">
-                    <button class="menu"><i class="fa-solid fa-bars fa-2xl" style="color: #1f5131;"></i></button>
                 </div>
+                <button class="menubtn"><i class="fa-solid fa-bars fa-2xl" style="color: #1f5131;"></i></button>
+                        <ul class="menulists">
+                            <li>Services</li>
+                            <li>For Owners</li>
+                            <li>For Buyers</li>
+                            <li>Get Help</li>
+                        </ul>
             </nav>
         </div>
     </header>
@@ -46,99 +52,102 @@
         </div>
     </section>
 
-    <section class="card-section">
-        <div class="sliderwrapper" data-slide>
-            <button class="sliderbtn prev" data-slide-btn="prev"><img class="prev-btn" src="left-arrow.png" alt=""></button>
-            <button class="sliderbtn next" data-slide-btn="next"><img class="next-btn" src="right-arrow.png" alt=""></button>
-            <ul class="slider-pos-wrapper" sliderposwraps>
-                <li class="slider-pos" data-active></li>
-                <li class="slider-pos"></li>
-                <li class="slider-pos"></li>
-            </ul>
-            <div class="card-slides" livecardslide>
-                <div class="liveslide" data-active>
-                    <div class="card">
-                        <img src="xiao2.jpg" alt="">
-                        <div class="card-content">
-                            <h3>Card 1</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus fugiat asperiores distinctio unde, minima nihil! Exercitationem at repellat veniam aut.</p>
-                            <button><a href="#"></a>Read More</button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="xiao2.jpg" alt="">
-                        <div class="card-content">
-                            <h3>Card 2</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus fugiat asperiores distinctio unde, minima nihil! Exercitationem at repellat veniam aut.</p>
-                            <button><a href="#"></a>Read More</button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="xiao2.jpg" alt="">
-                        <div class="card-content">
-                            <h3>Card 3</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus fugiat asperiores distinctio unde, minima nihil! Exercitationem at repellat veniam aut.</p>
-                            <button><a href="#"></a>Read More</button>
-                        </div>
-                    </div>
+    <div class="cards-wrapper">
+        <button class="btn prev"><i class="fa-solid fa-angle-left fa-2xl" style="color: #0080ff;"></i></button>
+        <button class="btn next"><i class="fa-solid fa-angle-right fa-2xl" style="color: #0080ff;"></i></button>
+        <div class="cards">
+            <div class="card">
+                <div class="card-img">
+                    <img class="card-image" src="xiao2.jpg" alt="">
                 </div>
-
-                <div class="liveslide">
-                    <div class="card">
-                        <img src="864471.jpg" alt="">
-                        <div class="card-content">
-                            <h3>Card 4</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus fugiat asperiores distinctio unde, minima nihil! Exercitationem at repellat veniam aut.</p>
-                            <button><a href="#"></a>Read More</button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="864471.jpg" alt="">
-                        <div class="card-content">
-                            <h3>Card 5</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus fugiat asperiores distinctio unde, minima nihil! Exercitationem at repellat veniam aut.</p>
-                            <button><a href="#"></a>Read More</button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="864471.jpg" alt="">
-                        <div class="card-content">
-                            <h3>Card 6</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus fugiat asperiores distinctio unde, minima nihil! Exercitationem at repellat veniam aut.</p>
-                            <button><a href="#"></a>Read More</button>
-                        </div>
-                    </div>
+                <div class="card-content">
+                    <h4 class="card-head">Sunrise Apartment</h4>
+                    <p class="card-price">15,000 Rs. P/M</p>
+                    <button class="card-btn"><a href="#"></a>Book Now</button>
                 </div>
-
-                <div class="liveslide">
-                    <div class="card">
-                        <img src="zoro.jpg" alt="">
-                        <div class="card-content">
-                            <h3>Card 7</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus fugiat asperiores distinctio unde, minima nihil! Exercitationem at repellat veniam aut.</p>
-                            <button><a href="#"></a>Read More</button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="zoro.jpg" alt="">
-                        <div class="card-content">
-                            <h3>Card 8</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus fugiat asperiores distinctio unde, minima nihil! Exercitationem at repellat veniam aut.</p>
-                            <button><a href="#"></a>Read More</button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="zoro.jpg" alt="">
-                        <div class="card-content">
-                            <h3>Card 9</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus fugiat asperiores distinctio unde, minima nihil! Exercitationem at repellat veniam aut.</p>
-                            <button><a href="#"></a>Read More</button>
-                        </div>
-                    </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img class="card-image" src="xiao2.jpg" alt="">
+                </div>
+                <div class="card-content">
+                    <h4 class="card-head">Sunrise Apartment</h4>
+                    <p class="card-price">15,000 Rs. P/M</p>
+                    <button class="card-btn"><a href="#"></a>Book Now</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img class="card-image" src="xiao2.jpg" alt="">
+                </div>
+                <div class="card-content">
+                    <h4 class="card-head">Sunrise Apartment</h4>
+                    <p class="card-price">15,000 Rs. P/M</p>
+                    <button class="card-btn"><a href="#"></a>Book Now</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img class="card-image" src="xiao2.jpg" alt="">
+                </div>
+                <div class="card-content">
+                    <h4 class="card-head">Sunrise Apartment</h4>
+                    <p class="card-price">15,000 Rs. P/M</p>
+                    <button class="card-btn"><a href="#"></a>Book Now</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img class="card-image" src="xiao2.jpg" alt="">
+                </div>
+                <div class="card-content">
+                    <h4 class="card-head">Sunrise Apartment</h4>
+                    <p class="card-price">15,000 Rs. P/M</p>
+                    <button class="card-btn"><a href="#"></a>Book Now</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img class="card-image" src="xiao2.jpg" alt="">
+                </div>
+                <div class="card-content">
+                    <h4 class="card-head">Sunrise Apartment</h4>
+                    <p class="card-price">15,000 Rs. P/M</p>
+                    <button class="card-btn"><a href="#"></a>Book Now</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img class="card-image" src="xiao2.jpg" alt="">
+                </div>
+                <div class="card-content">
+                    <h4 class="card-head">Sunrise Apartment</h4>
+                    <p class="card-price">15,000 Rs. P/M</p>
+                    <button class="card-btn"><a href="#"></a>Book Now</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img class="card-image" src="xiao2.jpg" alt="">
+                </div>
+                <div class="card-content">
+                    <h4 class="card-head">Sunrise Apartment</h4>
+                    <p class="card-price">15,000 Rs. P/M</p>
+                    <button class="card-btn"><a href="#"></a>Book Now</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img class="card-image" src="xiao2.jpg" alt="">
+                </div>
+                <div class="card-content">
+                    <h4 class="card-head">Sunrise Apartment</h4>
+                    <p class="card-price">15,000 Rs. P/M</p>
+                    <button class="card-btn"><a href="#"></a>Book Now</button>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <div class="city-container">
         <div class="city-content">
@@ -226,10 +235,12 @@
         </div>
         </div>
     </div>
+
 </footer>
 
 <script src="slider.js"></script>
-<script src="cardslider.js"></script>
+<script src="app.js"></script>
+<script src="menu.js"></script>
 
 </body>
 </html>
