@@ -5,24 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apato</title>
 
-    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="css/homepage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 
 </head>
 <body>
     <header>
         <div class="navbar">
             <nav>
-                <a href="#" class="logo"><img class="web-logo" src="logo-png.png" alt=""></a>
+                <a href="#" class="logo"><img class="web-logo" src="Images/logo-png.png" alt=""></a>
                 <a href="#">For Owners</a>
                 <a href="#">For Buyers</a>
 
                 <div class="icons">
-                    <button class="filter-icon"><i class="fa-solid fa-filter" style="color: #1f5131;"></i></button>
+                    <button class="filter-icon" onclick="showScreen()"><i class="fa-solid fa-filter" style="color: #1f5131;"></i></button>
                     <input type="search" placeholder="search" class="search-bar">
-                    <img src="" class="profile" alt="">
+                    <img src="Images/profilepic.jpg" class="profile" alt="">
                 </div>
-                <button class="menubtn"><i class="fa-solid fa-bars fa-2xl" style="color: #1f5131;"></i></button>
+                <button class="menubtn" ><i class="fa-solid fa-bars fa-2xl" style="color: #1f5131;"></i></button>
                         <ul class="menulists">
                             <li>Services</li>
                             <li>For Owners</li>
@@ -34,155 +38,211 @@
     </header>
 
     <main>
+        <div class="component-wrapper" id="filter">
+            <div class="direction">
+                <button class="back-btn" onclick="hideScreen()">Back</button>
+                <h2 class="heading">Filter Search</h2>
+                <div></div>
+            </div>
+    
+            <div class="filter-comp">
+                <div class="advance-search1">
+                    <div class="location-search">
+                        <button class="map-btn">Search</button>
+                    </div>
+                </div>
+    
+                <div class="advance-search2">
+                    <div class="price-range">
+                        <h4>Adjust budget</h4>
+                        <input type="range" id="price-range" name="price-range" min="5000" max="100000" value="10000" oninput="this.nextElementSibling.value = this.value">
+                        <output>10000</output>
+                        <div class="min-max">
+                            <div class="min-budget">
+                                <label for="min-budget">Min</label> <br>
+                                <input type="text" id="min-budget" name="min-budget" placeholder="" required minlength="3"> 
+                            </div>
+                            <div class="max-budget">
+                                <label for="max-budget">Max</label> <br>
+                                <input type="text" id="max-budget" name="max-budget" placeholder="" required minlength="3"> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search-by-city">
+                        <h4>Popular cities</h4>
+                        <div class="cities">
+                            <a href="" class="city1">Mumbai</a>
+                            <a href="" class="city1">Delhi</a>
+                            <a href="" class="city1">Chennai</a>
+                            <a href="" class="city1">Pune</a>
+                            <a href="" class="city1">Bangalore</a>
+                            <a href="" class="city1">Goa</a>
+                            <a href="" class="city1">Surat</a>
+                            <a href="" class="city1">Manali</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="advance-search3">
+                    <div class="apartment-type">
+                        <h4 class="room-type-heading">Apartment type</h4>
+                        <div class="room-btns">
+                            <button class="btn1 room-btn">1RK</button>
+                            <button class="btn2 room-btn">2RK</button>
+                            <button class="btn3 room-btn">1BHK</button>
+                            <button class="btn4 room-btn">2BHK</button>
+                            <button class="btn5 room-btn">3BHK</button>
+                            <button class="btn6 room-btn">4BHK</button>
+                        </div>
+                    </div>
+                        <div class="ratings">
+                            <h4>Ratings</h4>
+                            <fieldset id="rating">
+                                <input type="radio" id="rate" value="5star" name="rating">  5 Star <br>
+                                <input type="radio" id="rate" value="4star" name="rating">  4 Star <br>
+                                <input type="radio" id="rate" value="3star" name="rating">  3 Star <br>
+                            </fieldset>
+                        </div>
+                </div>
+            </div>
+    
+            <button class="filter-search-btn">Search</button>
+        </div>
+
 
     <section class="banner-section">
         <div class="bannerwrapper" data-banner>
-            <button class="bannerbtn prev" data-banner-btn="prev"><img class="prev-btn" src="left-arrow.png" alt=""></button>
-            <button class="bannerbtn next" data-banner-btn="next"><img class="next-btn" src="right-arrow.png" alt=""></button>
+            <button class="bannerbtn prev" data-banner-btn="prev"><i class="fa-solid fa-angle-left"></i></button>
+            <button class="bannerbtn next" data-banner-btn="next"><i class="fa-solid fa-angle-right"></i></button>
             <ul class="banner-pos-wrapper" bannerposwraps>
                 <li class="banner-pos" data-active></li>
                 <li class="banner-pos"></li>
                 <li class="banner-pos"></li>
             </ul>
             <div class="slides" livebanners>
-                <div class="livebanner" data-active><img src="xiao2.jpg" alt=""></div>
-                <div class="livebanner"><img src="zoro.jpg" alt=""></div>
-                <div class="livebanner"><img src="864471.jpg" alt=""></div>
+                <div class="livebanner" data-active><img src="Images/ad1.jpg" alt=""></div>
+                <div class="livebanner"><img src="Images/ad2.jpg" alt=""></div>
+                <div class="livebanner"><img src="Images/864471.jpg" alt=""></div>
             </div>
         </div>
     </section>
 
-    <div class="cards-wrapper">
-        <button class="btn prev"><i class="fa-solid fa-angle-left fa-2xl" style="color: #0080ff;"></i></button>
-        <button class="btn next"><i class="fa-solid fa-angle-right fa-2xl" style="color: #0080ff;"></i></button>
-        <div class="cards">
-            <div class="card">
-                <div class="card-img">
-                    <img class="card-image" src="xiao2.jpg" alt="">
-                </div>
-                <div class="card-content">
-                    <h4 class="card-head">Sunrise Apartment</h4>
-                    <p class="card-price">15,000 Rs. P/M</p>
-                    <button class="card-btn"><a href="#"></a>Book Now</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                    <img class="card-image" src="xiao2.jpg" alt="">
-                </div>
-                <div class="card-content">
-                    <h4 class="card-head">Sunrise Apartment</h4>
-                    <p class="card-price">15,000 Rs. P/M</p>
-                    <button class="card-btn"><a href="#"></a>Book Now</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                    <img class="card-image" src="xiao2.jpg" alt="">
-                </div>
-                <div class="card-content">
-                    <h4 class="card-head">Sunrise Apartment</h4>
-                    <p class="card-price">15,000 Rs. P/M</p>
-                    <button class="card-btn"><a href="#"></a>Book Now</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                    <img class="card-image" src="xiao2.jpg" alt="">
-                </div>
-                <div class="card-content">
-                    <h4 class="card-head">Sunrise Apartment</h4>
-                    <p class="card-price">15,000 Rs. P/M</p>
-                    <button class="card-btn"><a href="#"></a>Book Now</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                    <img class="card-image" src="xiao2.jpg" alt="">
-                </div>
-                <div class="card-content">
-                    <h4 class="card-head">Sunrise Apartment</h4>
-                    <p class="card-price">15,000 Rs. P/M</p>
-                    <button class="card-btn"><a href="#"></a>Book Now</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                    <img class="card-image" src="xiao2.jpg" alt="">
-                </div>
-                <div class="card-content">
-                    <h4 class="card-head">Sunrise Apartment</h4>
-                    <p class="card-price">15,000 Rs. P/M</p>
-                    <button class="card-btn"><a href="#"></a>Book Now</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                    <img class="card-image" src="xiao2.jpg" alt="">
-                </div>
-                <div class="card-content">
-                    <h4 class="card-head">Sunrise Apartment</h4>
-                    <p class="card-price">15,000 Rs. P/M</p>
-                    <button class="card-btn"><a href="#"></a>Book Now</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                    <img class="card-image" src="xiao2.jpg" alt="">
-                </div>
-                <div class="card-content">
-                    <h4 class="card-head">Sunrise Apartment</h4>
-                    <p class="card-price">15,000 Rs. P/M</p>
-                    <button class="card-btn"><a href="#"></a>Book Now</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                    <img class="card-image" src="xiao2.jpg" alt="">
-                </div>
-                <div class="card-content">
-                    <h4 class="card-head">Sunrise Apartment</h4>
-                    <p class="card-price">15,000 Rs. P/M</p>
-                    <button class="card-btn"><a href="#"></a>Book Now</button>
-                </div>
-            </div>
+    <div class="card-slider-container">
+    <div class="wrapper">
+        <div class="title"><h2>Recommendation for you</h2>
+        <div class="slide-btns">
+        <i id="left" class="fa-solid fa-angle-left"></i>
+        <i id="right" class="fa-solid fa-angle-right"></i>
         </div>
+        </div>
+        <ul class="carousel">
+          <li class="card">
+            <div class="img"><img src="Images/apartment1.jpg" alt="img" draggable="false"></div>
+            <div class="card-content">
+                <div class="details">
+                    <h3>Blanche Pearson</h3>
+                    <h3>$500 P/M</h3>
+                </div>
+                <div class="address"><p>Location</p></div>
+                <div class="card-btn"><button class="check-btn">Check Now</button></div>
+            </div>
+          </li>
+          <li class="card">
+            <div class="img"><img src="Images/apartment1.jpg" alt="img" draggable="false"></div>
+            <div class="card-content">
+                <div class="details">
+                    <h3>Blanche Pearson</h3>
+                    <h3>$500 P/M</h3>
+                </div>
+                <div class="address"><p>Location</p></div>
+                <div class="card-btn"><button class="check-btn">Check Now</button></div>
+            </div>
+          </li>
+          <li class="card">
+            <div class="img"><img src="Images/apartment1.jpg" alt="img" draggable="false"></div>
+            <div class="card-content">
+                <div class="details">
+                    <h3>Blanche Pearson</h3>
+                    <h3>$500 P/M</h3>
+                </div>
+                <div class="address"><p>Location</p></div>
+                <div class="card-btn"><button class="check-btn">Check Now</button></div>
+            </div>
+          </li>
+          <li class="card">
+            <div class="img"><img src="Images/apartment1.jpg" alt="img" draggable="false"></div>
+            <div class="card-content">
+                <div class="details">
+                    <h3>Blanche Pearson</h3>
+                    <h3>$500 P/M</h3>
+                </div>
+                <div class="address"><p>Location</p></div>
+                <div class="card-btn"><button class="check-btn">Check Now</button></div>
+            </div>
+          </li>
+          <li class="card">
+            <div class="img"><img src="Images/apartment1.jpg" alt="img" draggable="false"></div>
+            <div class="card-content">
+                <div class="details">
+                    <h3>Blanche Pearson</h3>
+                    <h3>$500 P/M</h3>
+                </div>
+                <div class="address"><p>Location</p></div>
+                <div class="card-btn"><button class="check-btn">Check Now</button></div>
+            </div>
+          </li>
+          <li class="card">
+            <div class="img"><img src="Images/apartment1.jpg" alt="img" draggable="false"></div>
+            <div class="card-content">
+                <div class="details">
+                    <h3>Blanche Pearson</h3>
+                    <h3>$500 P/M</h3>
+                </div>
+                <div class="address"><p>Location</p></div>
+                <div class="card-btn"><button class="check-btn">Check Now</button></div>
+            </div>
+          </li>
+        </ul>
+        <div class="view-btn">
+            <button class="view-more-btn">View more</button>
+        </div>
+      </div>
     </div>
 
     <div class="city-container">
         <div class="city-content">
-            <h3 class="city-head">Search by cities</h3>
+            <h2 class="city-head">Search by cities</h2>
             <div class="cities">
                 <div class="city city1">
-                    <img class="city-image" src="" alt="">
+                    <img class="city-image" src="Images/pune.jpg" alt="">
                     <p class="city-name">Pune</p>
                 </div>
                 <div class="city city2">
-                    <img class="city-image" src="" alt="">
+                    <img class="city-image" src="Images/mumbai.jpg" alt="">
                     <p class="city-name">Mumbai</p>
                 </div>
                 <div class="city city3">
-                    <img class="city-image" src="" alt="">
+                    <img class="city-image" src="Images/chennai.jpg" alt="">
                     <p class="city-name">Chennai</p>
                 </div>
                 <div class="city city4">
-                    <img class="city-image" src="" alt="">
+                    <img class="city-image" src="Images/bangalore.jpg" alt="">
                     <p class="city-name">Banglore</p>
                 </div>
                 <div class="city city5">
-                    <img class="city-image" src="" alt="">
+                    <img class="city-image" src="Images/delhi.jpg" alt="">
                     <p class="city-name">New Delhi</p>
                 </div>
                 <div class="city city6">
-                    <img class="city-image" src="" alt="">
+                    <img class="city-image" src="Images/ahmdabad.jpg" alt="">
                     <p class="city-name">Ahamdabad</p>
                 </div>
                 <div class="city city7">
-                    <img class="city-image" src="" alt="">
-                    <p class="city-name">Kolkata</p>
+                    <img class="city-image" src="Images/surat.jpg" alt="">
+                    <p class="city-name">Surat</p>
                 </div>
                 <div class="city city8">
-                    <img class="city-image" src="" alt="">
+                    <img class="city-image" src="Images/goa.jpg" alt="">
                     <p class="city-name">Goa</p>
                 </div>
             </div>
@@ -200,7 +260,7 @@
                 <button class="check-tip">Check Now</button>
             </div>
             <div class="tip-image">
-                <img src="" class="tip-img" alt="">
+                <img src="Images/ad3.jpg" class="tip-img" alt="">
             </div>
         </div>
     </div>
@@ -210,7 +270,7 @@
 <footer>
     <div class="links">
         <div class="companyinfo">         
-            <a href="#" class="companylogo"><img src="logo-png.png" class="footerlogo" alt=""></a>
+            <a href="#" class="companylogo"><img src="Images/logo-png.png" class="footerlogo" alt=""></a>
             <div class="snslinks">
                 <button class="sns1"><i class="fa-brands fa-facebook-f fa-xl" style="color: #0091ff;"></i></i></button>
                 <button class="sns1"><i class="fa-brands fa-instagram fa-xl" style="color: #fe1650;"></i></button>
@@ -238,9 +298,10 @@
 
 </footer>
 
-<script src="slider.js"></script>
-<script src="app.js"></script>
-<script src="menu.js"></script>
+<script src="Js/slider.js"></script>
+<script src="Js/app.js"></script>
+<script src="Js/menu.js"></script>
+<script src="Js/filter.js"></script>
 
 </body>
 </html>

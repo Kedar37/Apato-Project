@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+body{
+    position: relative;
+    width: auto;
+    height: auto;
+}
+
+.profile{
+    width: auto;
+    height: auto;
+    margin: 0 5rem;
+}
+
+.profile-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 2rem;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 1rem;
+}
+
+.profile-img{
+    padding: 1rem;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+img.pfp{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+p.username{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+button.change-name{
+    margin-left: 10px;
+    width: auto;
+    padding: 5px;
+    cursor: pointer;
+    color: rgb(0, 119, 255);
+}
+
+button.upload-img{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 2px solid black;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: white;
+    color: rgb(26, 67, 47);
+    cursor: pointer;
+}
+
+.personal-info{
+    width: auto;
+    height: auto;
+}
+
+.address{
+    margin-bottom: 2rem;
+}
+
+#user-address{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    margin-top: 10px;
+}
+
+.email-id{
+    margin-bottom: 2rem;
+}
+
+#email{
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    margin-top: 10px;
+}
+
+.phone-no{
+    margin-bottom: 2rem;
+}
+
+#number{
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    margin-top: 10px;
+}
+
+.card-details{
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    gap: 1rem;
+    width: 100%;
+    height: auto;
+}
+
+.card-bank{
+    margin-bottom: 2rem;
+}
+
+#bank{
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    margin-top: 10px;
+}
+
+.card-no{
+    margin-bottom: 2rem;
+}
+
+#cardnumber{
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    margin-top: 10px;
+}
+
+button.confirm-btn{
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: rgb(26, 67, 47);
+    color: white;
+    cursor: pointer;
+}
+
+@media screen and (max-width:768px) {
+    .profile-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .profile-img{
+        margin-bottom: 1.5rem;
+    }
+}

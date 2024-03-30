@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/profile.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+<div class="profile">
+    <div class="profile-container">
+        <div class="profile-img">
+            <img src="zoro.jpg" alt="" class="pfp">
+            <p class="username">Username <button class="change-name">Edit</button></p>
+            <button class="upload-img">Upload Photo</button>
+        </div>
+        <div class="personal-info">
+            <div class="address">
+                <label for="user-address">Your Address</label><br>
+                <input type="text" id="user-address" name="user-address" placeholder="" required minlength="15">
+            </div>
+            <div class="email-id">
+                <label for="email">Your Email id</label><br>
+                <input type="text" id="email" name="email" placeholder="" required minlength="10">
+            </div>
+            <div class="phone-no">
+                <label for="number">Your Phone Number</label><br>
+                <input type="text" id="number" name="number" placeholder="" required minlength="10">
+            </div>
+            <div class="card-details">
+                <div class="card-bank">
+                    <label for="bank">Card bank name</label><br>
+                    <input type="text" id="bank" name="bank" placeholder="" required minlength="5">
+                </div>
+                <div class="card-no">
+                    <label for="cardnumber">Card Number</label><br>
+                    <input type="text" id="cardnumber" name="cardnumber" placeholder="" required minlength="16">
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="confirm-btn">Confirm Changes</button>
+</div>
+
+</body>
+</html>

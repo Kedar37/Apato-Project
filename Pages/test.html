@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Select Checkboxes</title>
+  <style>
+    /* Add your styles here if needed */
+  </style>
+</head>
+<body>
+
+<!-- HTML structure -->
+<div id="productContainer">
+  <!-- Your initial set of product cards -->
+  <div class="productCard">Product 1</div>
+  <div class="productCard">Product 2</div>
+  <div class="productCard">Product 3</div>
+  <div class="productCard">Product 4</div>
+  <div class="productCard">Product 5</div>
+  <div class="productCard">Product 6</div>
+</div>
+
+<button id="viewMore">View More</button>
+
+<!-- JavaScript code -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // Number of initially visible product cards
+  const initialCards = 3;
+
+  // Reference to the product container
+  const productContainer = document.getElementById("productContainer");
+
+  // Reference to the "View More" button
+  const viewMoreButton = document.getElementById("viewMore");
+
+  // Function to show more product cards
+  function showMoreCards() {
+    // Get all product cards
+    const allProductCards = document.querySelectorAll(".productCard");
+
+    // Determine the next set of cards to show
+    const nextCards = Array.from(allProductCards).slice(allProductCards.length, allProductCards.length + initialCards);
+
+    // Append the next set of cards to the container
+    nextCards.forEach(card => productContainer.appendChild(card));
+
+    // Check if there are no more cards to show, and hide the button
+    if (nextCards.length === 0) {
+      viewMoreButton.style.display = "none";
+    }
+  }
+
+  // Attach click event listener to the "View More" button
+  viewMoreButton.addEventListener("click", showMoreCards);
+});
+</script>
+
+
+</body>
+</html>
