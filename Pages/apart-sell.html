@@ -6,7 +6,11 @@
     <link rel="stylesheet" href="../css/apart-sell.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <title>Recommandation</title>
+    <title>Sell Apartment</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -34,76 +38,84 @@
     </header>
 
     <main>
-        <div class="direction">
-            <button class="back-btn">Back</button>
-            <h2 class="heading">Sell Your Apartment For Rent</h2>
-            <div></div>
+        <div class="main-container">
+        <div class="sub-container">
+            <div class="form-container">
+                <form action="" class="sell-form">
+                  <div class="field">
+                    <label for="name">Property Name</label><br>
+                    <input type="text" id="name" name="name" placeholder=" " required minlength="3">
+                  </div>
+                  <div class="field">
+                    <label for="address">Property Address</label><br>
+                    <input type="text" id="address" name="address" placeholder=" " required minlength="10">
+                  </div>
+                  <div class="field">
+                    <label for="rent">Rent Amount</label><br>
+                    <input type="text" id="rent" name="rent" placeholder=" " required minlength="2">
+                  </div>
+                  <div class="field">
+                    <label for="details">Description</label><br>
+                    <textarea name="details" id="details" cols="30" rows="10"></textarea>
+                  </div>
+                  <div class="apartment-type">
+                    <h4 class="room-type-heading">Services</h4>
+                    <div class="option-wrapper">
+                        <div class="options">
+                            <input type="radio" name="one" class="radio" id="one" checked>
+                            <label for="one" class="option-label active-option">One</label>
+                        </div>
+                        <div class="options">
+                            <input type="radio" name="one" class="radio" id="two">
+                            <label for="two" class="option-label">two</label>
+                        </div>
+                        <div class="options">
+                            <input type="radio" name="one" class="radio" id="three">
+                            <label for="three" class="option-label">three</label>
+                        </div>
+                        <div class="options">
+                            <input type="radio" name="one" class="radio" id="four">
+                            <label for="four" class="option-label">four</label>
+                        </div>
+                        <div class="options">
+                            <input type="radio" name="one" class="radio" id="five">
+                            <label for="five" class="option-label">five</label>
+                        </div>
+                        <div class="options">
+                            <input type="radio" name="one" class="radio" id="six">
+                            <label for="six" class="option-label">six</label>
+                        </div>
+                        <div class="options">
+                            <input type="radio" name="one" class="radio" id="seven">
+                            <label for="seven" class="option-label">seven</label>
+                        </div>
+                        <div class="options">
+                            <input type="radio" name="one" class="radio" id="eight">
+                            <label for="eight" class="option-label">eight</label>
+                        </div>
+                    </div>
+                  </div>
+                </form>
+            </div>
+            <div class="upload-images">
+              <div class="main-upload-img">
+                <img src="/Images/apartment1.jpg" alt="">
+              </div>
+              <div class="small-display-img">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+              </div>
+              <div class="uploadBtn">
+                <button>Upload Photos</button>
+              </div>
+            </div>
+          </div>
+          <div class="submitBtn">
+            <button>Submit For Sell</button>
+          </div>
         </div>
-        
-        <div class="component-wrapper">
-            <div class="apart-image">
-                <img src="zoro.jpg" alt="" class="apart-img">
-                <button class="upload-btn">Upload Photos</button>
-            </div>
-
-            <div class="apart-info">
-                <label for="name">Property Name</label><br>
-                <input type="text" id="name" name="name" placeholder=" " required minlength="3">
-
-                <label for="address">Property Address</label><br>
-                <input type="text" id="address" name="address" placeholder=" " required minlength="10">
-
-                <label for="rent">Rent Amount</label><br>
-                <input type="text" id="rent" name="rent" placeholder=" " required minlength="2">
-            </div>
-        </div>
-
-       <div class="description">
-            <label for="details">Description</label><br>
-            <input type="text" id="details" name="details" placeholder=" " required minlength="2">
-       </div> 
-
-
-    <div class="apartment-type">
-        <div class="divider"></div>
-        <h4 class="room-type-heading">Services</h4>
-        <div class="option-wrapper">
-            <div class="options">
-                <input type="radio" name="one" class="radio" id="one" checked>
-                <label for="one" class="option-label active-option">One</label>
-            </div>
-            <div class="options">
-                <input type="radio" name="one" class="radio" id="two">
-                <label for="two" class="option-label">two</label>
-            </div>
-            <div class="options">
-                <input type="radio" name="one" class="radio" id="three">
-                <label for="three" class="option-label">three</label>
-            </div>
-            <div class="options">
-                <input type="radio" name="one" class="radio" id="four">
-                <label for="four" class="option-label">four</label>
-            </div>
-            <div class="options">
-                <input type="radio" name="one" class="radio" id="five">
-                <label for="five" class="option-label">five</label>
-            </div>
-            <div class="options">
-                <input type="radio" name="one" class="radio" id="six">
-                <label for="six" class="option-label">six</label>
-            </div>
-            <div class="options">
-                <input type="radio" name="one" class="radio" id="seven">
-                <label for="seven" class="option-label">seven</label>
-            </div>
-            <div class="options">
-                <input type="radio" name="one" class="radio" id="eight">
-                <label for="eight" class="option-label">eight</label>
-            </div>
-        </div>
-    </div>
-
-    <button class="sell-btn">Sell for Rent</button>
     </main>
 
     <footer>

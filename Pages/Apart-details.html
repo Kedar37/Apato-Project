@@ -6,6 +6,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../css/Apart-details.css">
 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+
     <title>Apartment Details</title>
 </head>
 <body>
@@ -33,57 +39,59 @@
     </header>
 
     <main>
-        <div class="apartment-details">
-           <div class="component-wrapper">
-                <div class="direction">
-                    <button class="back-btn">Back</button>
-                    <h2 class="heading">Apartment Details</h2>
-                    <div></div>
-                </div>
+        <div class="main-container">
+            <div class="image-container">
+              <div class="container">
+                <img class="slide" src="/Images/apartment1.jpg" alt="">
+                <img class="slide" src="/Images/apartment2.jpg" alt="">
+                <img class="slide" src="/Images/room1.jpg" alt="">
+                <img class="slide" src="/Images/room2.jpg" alt="">
+              </div>
+              <div class="btn">
+                <button class="pre" onclick="prev()"><i id="left" class="fa-solid fa-angle-left fa-xl"></i></button>
+                <button class="next" onclick="next()"><i id="left" class="fa-solid fa-angle-right fa-xl"></i></button>
+        
+              </div>
+            </div>
+            <div class="apart-details">
+              <h2 class="apartName">Lorem Ipsum</h2>
+              <h3 class="apartPrice">$500 P/M</h3>
+              <h3 class="apartLocation">Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+              <div class="services">
+                  <h3>Services</h3>
+                  <div class="serviceIcons">
+                      <i class="fa-regular fa-building fa-2xl"></i>
+                      <i class="fa-regular fa-building fa-2xl"></i>
+                      <i class="fa-regular fa-building fa-2xl"></i>
+                      <i class="fa-regular fa-building fa-2xl"></i>
+                      <i class="fa-regular fa-building fa-2xl"></i>
+                      <i class="fa-regular fa-building fa-2xl"></i>
+                      <i class="fa-regular fa-building fa-2xl"></i>
+                      <i class="fa-regular fa-building fa-2xl"></i>
+                  </div>
+              </div>
+              <div class="bookBtns">
+                  <button class="book-btn">Book Now</button>
+                  <button class="save-btn">Save For Later</button>
+              </div>
+          </div>
+        </div>
+        <div class="divider"></div>
 
-                <div class="apart-details">
-                    <div class="apart-images">
-                        <div class="main-img">
-                            <img class="big-img" src="../Images/xiao2.jpg" alt="" srcset="">
-                        </div>
-                        <div class="small-img">
-                            <img class="img1" src="../Images/zoro.jpg" alt="" srcset="">
-                            <img class="img2" src="../Images/zoro.jpg" alt="" srcset="">
-                            <img class="img3" src="../Images/zoro.jpg" alt="" srcset="">
-                            <img class="img4" src="../Images/zoro.jpg" alt="" srcset="">
-                        </div>
-                    </div>
-                    <div class="apart-info">
-                        <div class="apart-name">
-                            <h3 class="name">Sunrise Apartment</h3>
-                            <h3 class="price">15,000 Rs. P/M</h3>
-                        </div>
-                        <h4 class="address">Kothrud, pune, 411010</h4>
-                        <div class="apart-description">
-                            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem explicabo nam culpa dicta eaque repellat eos doloremque, itaque veritatis quis, expedita eum provident quibusdam. Suscipit voluptatum perspiciatis iusto omnis quisquam enim sint cum molestias saepe facilis quae recusandae quos necessitatibus, ullam, adipisci tenetur ipsa temporibus nesciunt, laudantium officia eum vitae.</p>
-                        </div>
-                        <div class="services">
-                            <h4 class="label">Services</h4>
-                            <div class="service-icons">
-                                <img class="icon" src="#" alt="" srcset="">
-                                <img class="icon" src="#" alt="" srcset="">
-                                <img class="icon" src="#" alt="" srcset="">
-                                <img class="icon" src="#" alt="" srcset="">
-                                <img class="icon" src="#" alt="" srcset="">
-                                <img class="icon" src="#" alt="" srcset="">
-                            </div>
-                        </div>
-                        <div class="btns">
-                            <button class="book-btn">Book Now</button>
-                            <button class="save-btn">Save</button>
-                        </div>
-                    </div>
-                </div>
-           </div>
+        <div class="description">
+            <div class="apart-info">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, blanditiis quibusdam voluptate porro a quia enim maxime animi ut facere odio consequuntur, nam optio repudiandae, quidem vel dolor asperiores dicta!<br><br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sequi facere possimus cum eveniet ipsum reprehenderit cumque deleniti, temporibus quibusdam ipsam reiciendis excepturi ullam, tempore, molestiae assumenda similique architecto perferendis!
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum sint unde voluptate doloribus maiores minima ipsa nostrum. Eum aliquam perspiciatis ducimus praesentium accusantium, voluptate temporibus, minima deserunt tempora at fugit?
+                </p>
+            </div>
+            <div class="map">
+                <img src="/Images/map.jpg" alt="">
+            </div>
         </div>
 
         <div class="perks-container">
-            <div class="divider"></div>
                 <div class="perks">
                     <div class="perk1">
                         <h3 class="perk1head">Apartment Surrounding</h3>
@@ -116,109 +124,90 @@
                         <h4>lorem ipsum</h4>
                     </div>
                 </div>
-            <div class="divider"></div>
-        </div>
-
-        <div class="recommendation">
-        <h3 class="head">Recommended for you</h3>
-        <div class="cards-wrapper">
-            <button class="btn prev"><i class="fa-solid fa-angle-left fa-2xl" style="color: #0080ff;"></i></button>
-            <button class="btn next"><i class="fa-solid fa-angle-right fa-2xl" style="color: #0080ff;"></i></button>
-            <div class="cards">
-                <div class="card">
-                    <div class="card-img">
-                        <img class="card-image" src="../Images/xiao2.jpg" alt="">
-                    </div>
-                    <div class="card-content">
-                        <h4 class="card-head">Sunrise Apartment</h4>
-                        <p class="card-price">15,000 Rs. P/M</p>
-                        <button class="card-btn"><a href="#"></a>Book Now</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-img">
-                        <img class="card-image" src="../Images/xiao2.jpg" alt="">
-                    </div>
-                    <div class="card-content">
-                        <h4 class="card-head">Sunrise Apartment</h4>
-                        <p class="card-price">15,000 Rs. P/M</p>
-                        <button class="card-btn"><a href="#"></a>Book Now</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-img">
-                        <img class="card-image" src="../Images/xiao2.jpg" alt="">
-                    </div>
-                    <div class="card-content">
-                        <h4 class="card-head">Sunrise Apartment</h4>
-                        <p class="card-price">15,000 Rs. P/M</p>
-                        <button class="card-btn"><a href="#"></a>Book Now</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-img">
-                        <img class="card-image" src="../Images/xiao2.jpg" alt="">
-                    </div>
-                    <div class="card-content">
-                        <h4 class="card-head">Sunrise Apartment</h4>
-                        <p class="card-price">15,000 Rs. P/M</p>
-                        <button class="card-btn"><a href="#"></a>Book Now</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-img">
-                        <img class="card-image" src="../Images/xiao2.jpg" alt="">
-                    </div>
-                    <div class="card-content">
-                        <h4 class="card-head">Sunrise Apartment</h4>
-                        <p class="card-price">15,000 Rs. P/M</p>
-                        <button class="card-btn"><a href="#"></a>Book Now</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-img">
-                        <img class="card-image" src="../Images/xiao2.jpg" alt="">
-                    </div>
-                    <div class="card-content">
-                        <h4 class="card-head">Sunrise Apartment</h4>
-                        <p class="card-price">15,000 Rs. P/M</p>
-                        <button class="card-btn"><a href="#"></a>Book Now</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-img">
-                        <img class="card-image" src="../Images/xiao2.jpg" alt="">
-                    </div>
-                    <div class="card-content">
-                        <h4 class="card-head">Sunrise Apartment</h4>
-                        <p class="card-price">15,000 Rs. P/M</p>
-                        <button class="card-btn"><a href="#"></a>Book Now</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-img">
-                        <img class="card-image" src="../Images/xiao2.jpg" alt="">
-                    </div>
-                    <div class="card-content">
-                        <h4 class="card-head">Sunrise Apartment</h4>
-                        <p class="card-price">15,000 Rs. P/M</p>
-                        <button class="card-btn"><a href="#"></a>Book Now</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-img">
-                        <img class="card-image" src="../Images/xiao2.jpg" alt="">
-                    </div>
-                    <div class="card-content">
-                        <h4 class="card-head">Sunrise Apartment</h4>
-                        <p class="card-price">15,000 Rs. P/M</p>
-                        <button class="card-btn"><a href="#"></a>Book Now</button>
-                    </div>
-                </div>
             </div>
-        </div>
-        <button class="view-btn">View more</button>
-        </div>
+            <div class="divider"></div>
+
+        <div class="card-slider-container">
+            <div class="wrapper">
+                <div class="title"><h2>Recommendation for you</h2>
+                <div class="slide-btns">
+                <i id="left" class="fa-solid fa-angle-left"></i>
+                <i id="right" class="fa-solid fa-angle-right"></i>
+                </div>
+                </div>
+                <ul class="carousel">
+                  <li class="card">
+                    <div class="img"><img src="/Images/apartment1.jpg" alt="img" draggable="false"></div>
+                    <div class="card-content">
+                        <div class="details">
+                            <h3>Blanche Pearson</h3>
+                            <h3>$500 P/M</h3>
+                        </div>
+                        <div class="address"><p>Location</p></div>
+                        <div class="card-btn"><button class="check-btn">Check Now</button></div>
+                    </div>
+                  </li>
+                  <li class="card">
+                    <div class="img"><img src="/Images/apartment1.jpg" alt="img" draggable="false"></div>
+                    <div class="card-content">
+                        <div class="details">
+                            <h3>Blanche Pearson</h3>
+                            <h3>$500 P/M</h3>
+                        </div>
+                        <div class="address"><p>Location</p></div>
+                        <div class="card-btn"><button class="check-btn">Check Now</button></div>
+                    </div>
+                  </li>
+                  <li class="card">
+                    <div class="img"><img src="/Images/apartment1.jpg" alt="img" draggable="false"></div>
+                    <div class="card-content">
+                        <div class="details">
+                            <h3>Blanche Pearson</h3>
+                            <h3>$500 P/M</h3>
+                        </div>
+                        <div class="address"><p>Location</p></div>
+                        <div class="card-btn"><button class="check-btn">Check Now</button></div>
+                    </div>
+                  </li>
+                  <li class="card">
+                    <div class="img"><img src="/Images/apartment1.jpg" alt="img" draggable="false"></div>
+                    <div class="card-content">
+                        <div class="details">
+                            <h3>Blanche Pearson</h3>
+                            <h3>$500 P/M</h3>
+                        </div>
+                        <div class="address"><p>Location</p></div>
+                        <div class="card-btn"><button class="check-btn">Check Now</button></div>
+                    </div>
+                  </li>
+                  <li class="card">
+                    <div class="img"><img src="/Images/apartment1.jpg" alt="img" draggable="false"></div>
+                    <div class="card-content">
+                        <div class="details">
+                            <h3>Blanche Pearson</h3>
+                            <h3>$500 P/M</h3>
+                        </div>
+                        <div class="address"><p>Location</p></div>
+                        <div class="card-btn"><button class="check-btn">Check Now</button></div>
+                    </div>
+                  </li>
+                  <li class="card">
+                    <div class="img"><img src="/Images/apartment1.jpg" alt="img" draggable="false"></div>
+                    <div class="card-content">
+                        <div class="details">
+                            <h3>Blanche Pearson</h3>
+                            <h3>$500 P/M</h3>
+                        </div>
+                        <div class="address"><p>Location</p></div>
+                        <div class="card-btn"><button class="check-btn">Check Now</button></div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="view-btn">
+                    <button class="view-more-btn">View more</button>
+                </div>
+              </div>
+            </div>
     </main>
 
     <footer>
@@ -253,5 +242,40 @@
 
     <script src="../Js/app.js"></script>
     <script src="../Js/menu.js"></script>
+    <!-- <script src="../Js/apartdetails.js"></script> -->
+    <script>
+    
+    let slides = document.querySelectorAll(".slide");
+    
+    let count = 0;
+    
+    slides.forEach(function(slides, index){
+      slides.style.left=`${index * 100}%`;
+    });
+    
+    function next(){
+      count++;
+      if(count == slides.length){
+         count=0;
+      }
+      myFun();
+    
+    }
+    
+    function prev(){
+      count--;
+      if(count == -1){
+         count = slides.length-1;
+      }
+      myFun();
+    
+    }
+    
+    function  myFun(){
+     slides.forEach(function(slides){
+     slides.style.transform=`translateX(-${count * 100}%)`
+     })
+    }
+    </script>
 </body>
 </html>

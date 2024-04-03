@@ -3,60 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Multi-Select Checkboxes</title>
-  <style>
-    /* Add your styles here if needed */
-  </style>
+  <title>Document</title>
+
+  <link rel="stylesheet" href="/css/test.css">
 </head>
 <body>
-
-<!-- HTML structure -->
-<div id="productContainer">
-  <!-- Your initial set of product cards -->
-  <div class="productCard">Product 1</div>
-  <div class="productCard">Product 2</div>
-  <div class="productCard">Product 3</div>
-  <div class="productCard">Product 4</div>
-  <div class="productCard">Product 5</div>
-  <div class="productCard">Product 6</div>
-</div>
-
-<button id="viewMore">View More</button>
-
-<!-- JavaScript code -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  // Number of initially visible product cards
-  const initialCards = 3;
-
-  // Reference to the product container
-  const productContainer = document.getElementById("productContainer");
-
-  // Reference to the "View More" button
-  const viewMoreButton = document.getElementById("viewMore");
-
-  // Function to show more product cards
-  function showMoreCards() {
-    // Get all product cards
-    const allProductCards = document.querySelectorAll(".productCard");
-
-    // Determine the next set of cards to show
-    const nextCards = Array.from(allProductCards).slice(allProductCards.length, allProductCards.length + initialCards);
-
-    // Append the next set of cards to the container
-    nextCards.forEach(card => productContainer.appendChild(card));
-
-    // Check if there are no more cards to show, and hide the button
-    if (nextCards.length === 0) {
-      viewMoreButton.style.display = "none";
-    }
-  }
-
-  // Attach click event listener to the "View More" button
-  viewMoreButton.addEventListener("click", showMoreCards);
-});
-</script>
-
-
+  <div class="main-container">
+    <div class="form-container">
+        <form action="" class="sell-form">
+          <div class="field">
+            <label for="name">Property Name</label><br>
+            <input type="text" id="name" name="name" placeholder=" " required minlength="3">
+          </div>
+          <div class="field">
+            <label for="address">Property Address</label><br>
+            <input type="text" id="address" name="address" placeholder=" " required minlength="10">
+          </div>
+          <div class="field">
+            <label for="rent">Rent Amount</label><br>
+            <input type="text" id="rent" name="rent" placeholder=" " required minlength="2">
+          </div>
+          <div class="field">
+            <label for="details">Description</label><br>
+            <textarea name="details" id="details" cols="30" rows="10"></textarea>
+          </div>
+          <div class="apartment-type">
+            <h4 class="room-type-heading">Services</h4>
+            <div class="option-wrapper">
+                <div class="options">
+                    <input type="radio" name="one" class="radio" id="one" checked>
+                    <label for="one" class="option-label active-option">One</label>
+                </div>
+                <div class="options">
+                    <input type="radio" name="one" class="radio" id="two">
+                    <label for="two" class="option-label">two</label>
+                </div>
+                <div class="options">
+                    <input type="radio" name="one" class="radio" id="three">
+                    <label for="three" class="option-label">three</label>
+                </div>
+                <div class="options">
+                    <input type="radio" name="one" class="radio" id="four">
+                    <label for="four" class="option-label">four</label>
+                </div>
+                <div class="options">
+                    <input type="radio" name="one" class="radio" id="five">
+                    <label for="five" class="option-label">five</label>
+                </div>
+                <div class="options">
+                    <input type="radio" name="one" class="radio" id="six">
+                    <label for="six" class="option-label">six</label>
+                </div>
+                <div class="options">
+                    <input type="radio" name="one" class="radio" id="seven">
+                    <label for="seven" class="option-label">seven</label>
+                </div>
+                <div class="options">
+                    <input type="radio" name="one" class="radio" id="eight">
+                    <label for="eight" class="option-label">eight</label>
+                </div>
+            </div>
+          </div>
+        </form>
+    </div>
+    <div class="upload-images">
+      <div class="main-upload-img">
+        <img src="/Images/apartment1.jpg" alt="">
+      </div>
+      <div class="small-display-img">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+      </div>
+      <div class="uploadBtn">
+        <button>Upload Photos</button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

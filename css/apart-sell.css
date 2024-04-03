@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
     outline: none;
     border: none;
+    letter-spacing: 1.2px;
 }
 
 body{
@@ -14,7 +18,7 @@ body{
 
 header{
     max-height: 5rem;
-    width: 100%;
+    width: 100vw;
     background-color: rgb(113, 146, 113);
     padding: 1rem;
     z-index: 100;
@@ -139,124 +143,75 @@ ul.menulists>li:hover {
 }
 
 main{
-    width: auto;
-    height: auto;
-    margin: 0 5rem;
+    position: relative;
+    width: 100vw;
+    
 }
 
-.direction{
+.main-container{
+    width: 100vw;
+}
+
+.sub-container{
     display: flex;
-    justify-content: space-between;
-    margin: 2rem 0;
+    justify-content: space-evenly;
+    margin-top: 3rem;
 }
 
-button.back-btn{
-    padding: 5px;
-    border: none;
-    outline: none;
-    background-color: transparent;
-    color: black;
-    font-weight: 600;
-    cursor: pointer;
+.form-container{
+    width: 500px;
+    height: 90vh;
+    background-color: #edefee;
+    padding: 2rem;
+    max-height: auto;
+    overflow-y: scroll;
 }
 
-.component-wrapper{
-    display: grid;
-    grid-template-columns: 250px 2fr;
+.sell-form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     width: 100%;
-    height: auto;
-    gap: 1.5rem;
-    padding: 1.5rem;
-    border: 2px solid black;
-    border-radius: 10px;
+    height: 100%;
 }
 
-.apart-image{
-    width: 250px;
-    height: auto;
+.field{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-img.apart-img{
-    width: 250px;
-    height: 250px;
-    border-radius: 10px;
-    object-fit: cover;
+label{
+    font-weight: bold;
 }
 
-button.upload-btn{
-    width: 250px;
+.field > input{
+    width: 100%;
     padding: 1rem;
-    border-radius: 10px;
-    font-weight: 600;
-    margin-top: 1rem;
-}
-
-.apart-info{
-    width: 100%;
-    height: auto;
-}
-
-#name{
-    margin-top: 10px;
-    margin-bottom: 1rem;
-    width: 100%;
-    height: 50px;
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px solid gray;
-}
-
-#address{
-    margin-top: 10px;
-    margin-bottom: 1rem;
-    width: 100%;
-    height: 50px;
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px solid gray;
-}
-
-#rent{
-    margin-top: 10px;
-    margin-bottom: 1rem;
-    width: 100%;
-    height: 50px;
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px solid gray;
-}
-
-.description{
-    margin: 1rem 0;
-    width: 100%;
-    height: auto;
+    border: 2px solid #c9c9c9;
 }
 
 #details{
-    margin-top: 10px;
     width: 100%;
-    height: 50px;
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px solid gray;
+    height: 200px;
+    max-height: auto;
+    overflow-y: scroll;
+    padding: 1rem;
+    border: 2px solid #c9c9c9;
 }
 
 .apartment-type{
-    width: 100%;
-    height: auto;
-    margin-bottom: 2rem;
-}
-
-.room-type-heading{
-    font-size: 20px;
-    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .option-wrapper{
+    width: 100%;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 13px;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .radio{
@@ -265,13 +220,11 @@ button.upload-btn{
 
 .option-label{
     display: inline-block;
-    width: 200px;
-    height: 50px;
-    padding-top: 4px;
+    width: 100px;
+    padding: 1rem;
     text-align: center;
     cursor: pointer;
     border: 1px solid;
-    border-radius: 7px;
 }
 
 .active-option{
@@ -279,40 +232,80 @@ button.upload-btn{
     color: white;
 }
 
-button.sell-btn{
+
+.upload-images{
+    width: 600px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+.main-upload-img{
+    width: 600px;
+    height: 500px;
+}
+
+.main-upload-img > img{
     width: 100%;
-    padding: 1rem;
-    border-radius: 10px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.small-display-img{
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.small-display-img > img{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.uploadBtn button{
+    width: 100%;
+    color: white;
+    background-color: rgb(189, 189, 189);
+    font-size: 20px;
     font-weight: 600;
-    margin-bottom: 2rem;
+    padding: 1rem;
 }
 
-@media screen and (max-width:768px) {
-    main{
-        margin: 0 1.5rem;
-    }
-
-    .component-wrapper{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .apart-image{
-        margin-bottom: 1.5rem;
-    }
-
-    .option-label{
-        width: 70px;
-    }
+.uploadBtn button:hover{
+    background-color: #5d5d5d;
+    color: white;
 }
+
+.submitBtn{
+    text-align: center;
+}
+
+
+.submitBtn button{
+    width: 90%;
+    color: white;
+    background-color: rgb(113, 146, 113);
+    font-size: 20px;
+    font-weight: 600;
+    padding: 1rem;
+    margin-bottom: 3rem;
+}
+
+.submitBtn button:hover{
+    background-color: #245e39;
+    color: white;
+}
+
 
 
 footer{
     display: flex;
     justify-content: center;
     background-color: rgb(7, 40, 7);
-    width: 100%;
+    width: 100vw;
     height: auto;
     padding: 3rem;
 }

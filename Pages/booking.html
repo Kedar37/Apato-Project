@@ -8,6 +8,11 @@
 
     <title>Booking</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
     <header>
@@ -53,99 +58,93 @@
             </div>
         </div>
         
-        <div class="container">
-            <div class="apartment">
-                <div class="bannerwrapper" data-banner>
-                    <div class="slides" livebanners>
-                        <div class="livebanner" data-active><img src="xiao2.jpg" alt=""></div>
-                        <div class="livebanner"><img src="zoro.jpg" alt=""></div>
-                        <div class="livebanner"><img src="864471.jpg" alt=""></div>
-                    </div>
-                </div>
-                <div class="apartment-info">
-                    <div class="info">
-                    <div class="name">
-                        <h3 class="apartment-name">Sunrise Apartment</h3>
-                    </div>
-                    <div class="amount">
-                        <h3 class="apart-price">15,000 Rs. P/M</h3>
-                    </div>
-                    </div>
-                    <div class="apart-details">
-                        <div class="description">
-                            <p class="apartment-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque error nesciunt perspiciatis molestias commodi sequi.</p>
-                        </div>
-                        <div class="apartment-feature">
-                            <div class="feature-icons">
-                                <img class="icon1 icon" src="left-arrow.png" alt="">
-                                <img class="icon2 icon" src="right-arrow.png" alt="">
-                                <img class="icon3 icon" src="left-arrow.png" alt="">
-                                <img class="icon4 icon" src="right-arrow.png" alt="">
-                                <img class="icon5 icon" src="left-arrow.png" alt="">
-                                <img class="icon6 icon" src="right-arrow.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="main-container">
+            <div class="image-container">
+              <div class="container">
+                <img class="slide" src="/Images/apartment1.jpg" alt="">
+                <img class="slide" src="/Images/apartment2.jpg" alt="">
+                <img class="slide" src="/Images/room1.jpg" alt="">
+                <img class="slide" src="/Images/room2.jpg" alt="">
+              </div>
+              <div class="btn">
+                <button class="pre" onclick="prev()"><i id="left" class="fa-solid fa-angle-left fa-xl"></i></button>
+                <button class="next" onclick="next()"><i id="left" class="fa-solid fa-angle-right fa-xl"></i></button>
+        
+              </div>
             </div>
+            <div class="apart-details">
+              <h2 class="apartName">Lorem Ipsum</h2>
+              <h3 class="apartPrice">$500 P/M</h3>
+              <h3 class="apartLocation">Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+              <div class="services">
+                  <h3>Services</h3>
+                  <div class="serviceIcons">
+                      <i class="fa-regular fa-building fa-2xl"></i>
+                      <i class="fa-regular fa-building fa-2xl"></i>
+                      <i class="fa-regular fa-building fa-2xl"></i>
+                      <i class="fa-regular fa-building fa-2xl"></i>
+                      <i class="fa-regular fa-building fa-2xl"></i>
+                      <i class="fa-regular fa-building fa-2xl"></i>
+                      <i class="fa-regular fa-building fa-2xl"></i>
+                      <i class="fa-regular fa-building fa-2xl"></i>
+                  </div>
+              </div>
+              <div class="apart-info">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, blanditiis quibusdam voluptate porro a quia enim maxime animi ut facere odio consequuntur, nam optio repudiandae, quidem vel dolor asperiores dicta!<br><br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sequi facere possimus cum eveniet ipsum reprehenderit cumque deleniti, temporibus quibusdam ipsam reiciendis excepturi ullam, tempore, molestiae assumenda similique architecto perferendis!
+                </p>
+            </div>
+          </div>
         </div>
 
-        <div class="date-schedule">
-            <h2 class="head">Schedule your stay</h2>
-
-            <div class="start-date">
-                <label for="start_date">Arriving Date: </label>
-                <input type="date" id="start_date" name="start_date">
-            </div>
-
-            <div class="end-date">
-                <label for="end_date">Leaving Date: </label>
-                <input type="date" id="end_date" name="end_date">
-            </div>
-        </div>
-        <p class="note">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, dolore. Animi pariatur ea, similique eaque nesciunt assumenda dolorum illum aliquid.</p>
 
         <div class="registration-form">
             <h2 class="form-title">Registration Form</h2>
             <form action="post" class="register-form">
-                <div class="column">
-                    <div class="name">
-                        <label for="firstname" class="firstname">First Name</label><br>
-                        <input type="text" id="firstname" name="firstname" placeholder=" " required minlength="2">
+                <div class="date-schedule">                
+                    <div class="start-date">
+                        <label for="start_date">Arriving Date: </label>
+                        <input type="date" id="start_date" name="start_date">
                     </div>
-    
-                    <div class="last-name">
-                        <label for="lastname">Last Name</label><br>
-                        <input type="text" id="lastname" name="lastname" placeholder=" " required minlength="2">
+        
+                    <div class="end-date">
+                        <label for="end_date">Leaving Date: </label>
+                        <input type="date" id="end_date" name="end_date">
                     </div>
                 </div>
+                <p class="note">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, dolore. Animi pariatur ea, similique eaque nesciunt assumenda dolorum illum aliquid.</p>
+        
+                <div class="field">
+                    <label for="fullname" class="firstname">Full Name</label><br>
+                    <input type="text" id="fullname" name="fullname" placeholder=" " required minlength="2">
+                </div>
+
     
-                <div class="email">
+                <div class="field">
                     <label for="emailid">Email Address</label><br>
-                    <input type="text" id="emailid" name="emailid" placeholder=" Enter your email" required minlength="2">
+                    <input type="text" id="emailid" name="emailid" placeholder="" required minlength="2">
                 </div>
     
-            <div class="column2">
-                <div class="phone-number">
+                <div class="field">
                     <label for="phone-no">Phone Number</label><br>
                     <input type="text" id="phone-no" name="phone-no" required minlength="10">
                 </div>
-                <div class="alt-phone-number">
+
+                <div class="field">
                     <label for="alt-phone-no">Alternative Phone Number</label><br>
                     <input type="text" id="alt-phone-no" name="alt-phone-no" required minlength="10">
                 </div>
-            </div>
 
-            <div class="column3">
-                <div class="id-number">
+                <div class="field">
                     <label for="id">National Id Number</label><br>
                     <input type="text" id="id" name="id" required minlength="12">
                 </div>
-                <div class="passport">
+
+                <div class="field">
                     <label for="passport-no">Passport Number</label><br>
                     <input type="text" id="passport-no" name="passport-no" required minlength="8">
                 </div>
-            </div>
                 <button class="proceed-btn" type="submit">Proceed to payment</button>
             </form>
         </div>
@@ -184,6 +183,40 @@
 
     <script src="../Js/menu.js"></script>
     <script src="../Js/smallimgslider.js"></script>
+    <script>
+    
+        let slides = document.querySelectorAll(".slide");
+        
+        let count = 0;
+        
+        slides.forEach(function(slides, index){
+          slides.style.left=`${index * 100}%`;
+        });
+        
+        function next(){
+          count++;
+          if(count == slides.length){
+             count=0;
+          }
+          myFun();
+        
+        }
+        
+        function prev(){
+          count--;
+          if(count == -1){
+             count = slides.length-1;
+          }
+          myFun();
+        
+        }
+        
+        function  myFun(){
+         slides.forEach(function(slides){
+         slides.style.transform=`translateX(-${count * 100}%)`
+         })
+        }
+        </script>
 
 </body>
 </html>

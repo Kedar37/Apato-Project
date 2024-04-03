@@ -2,7 +2,7 @@ const bannerbtn = document.querySelectorAll('.bannerbtn');
 
 bannerbtn.forEach(btn => {
     btn.addEventListener('click', () => {
-        let offset = btn.dataset.bannerBtn === 'next'?1:-1;
+        let offset = btn.dataset.bannerBtn === 'next' ? 1 : -1;
 
         let banner = btn.closest("[data-banner]").querySelector("[livebanners]");
         let bannerpos = btn.closest("[data-banner]").querySelector("[bannerposwraps]");
