@@ -8,6 +8,11 @@
 
     <title>Recommandation</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
     <header>
@@ -34,319 +39,174 @@
     </header>
 
     <main>
-        <div class="recommandation">
-           <div class="component-wrapper">
-                <div class="direction">
-                    <button class="back-btn">Back</button>
-                    <h2 class="heading">Recommandation for you</h2>
-                    <div></div>
-                </div>
-                <div class="components">
-                    <div class="filter-comp">
-                        <div class="head-name">
-                            <h3 class="filter-n">Filter</h3>
-                        </div>
-                        <div class="map">
-                            <div class="divider"></div>
-                            <button class="location-btn">Search on map</button>
-                        </div>
-                        <div class="price-range">
-                            <div class="divider"></div>
-                            <h4>Adjust budget</h4>
-                            <input type="range" id="price-range" name="price-range" min="5000" max="100000" value="10000" oninput="this.nextElementSibling.value = this.value">
-                            <output>10000</output>
-                            <div class="min-max">
-                                <div class="min-budget">
-                                    <label for="min-budget">Min</label> <br>
-                                    <input type="text" id="min-budget" name="min-budget" placeholder="" required minlength="3"> 
-                                </div>
-                                <div class="max-budget">
-                                    <label for="max-budget">Max</label> <br>
-                                    <input type="text" id="max-budget" name="max-budget" placeholder="" required minlength="3"> 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="apartment-type">
-                            <div class="divider"></div>
-                            <h4 class="room-type-heading">Apartment type</h4>
-                            <div class="room-btns" id="option-container">
-                                <button class="btn1 room-btn" onclick="toggleSelection(this)">1RK</button>
-                                <button class="btn2 room-btn" onclick="toggleSelection(this)">2RK</button>
-                                <button class="btn3 room-btn" onclick="toggleSelection(this)">1BHK</button>
-                                <button class="btn4 room-btn" onclick="toggleSelection(this)">2BHK</button>
-                                <button class="btn5 room-btn" onclick="toggleSelection(this)">3BHK</button>
-                                <button class="btn6 room-btn" onclick="toggleSelection(this)">4BHK</button>
-                            </div>
-                        </div>
-                        <div class="search-by-city">
-                            <div class="divider"></div>
-                            <h4>Popular cities</h4>
-                            <div class="cities">
-                                <a href="" class="city1">Mumbai</a>
-                                <a href="" class="city1">Delhi</a>
-                                <a href="" class="city1">Chennai</a>
-                                <a href="" class="city1">Pune</a>
-                                <a href="" class="city1">Bangalore</a>
-                                <a href="" class="city1">Goa</a>
-                            </div>
-                        </div>
-                        <div class="ratings">
-                            <div class="divider"></div>
-                            <h4>Ratings</h4>
-                            <fieldset id="rating">
-                                <input type="checkbox" id="rate" value="5star" name="rating" onchange="toggleSelection(this)">  5 Star <br>
-                                <input type="checkbox" id="rate" value="4star" name="rating" onchange="toggleSelection(this)">  4 Star <br>
-                                <input type="checkbox" id="rate" value="3star" name="rating" onchange="toggleSelection(this)">  3 Star <br>
-                            </fieldset>
-                        </div>
-                        <div class="fil-ser-btn">
-                            <div class="divider"></div>
-                            <button class="filter-search-btn">Search</button>
-                        </div>
-                    </div>
 
-                    <div class="apartment-comp" id="cardContainer">
-                        <div class="apartment">
-                            <div class="bannerwrapper" data-banner>
-                                <div class="slides" livebanners>
-                                    <div class="livebanner" data-active><img src="xiao2.jpg" alt=""></div>
-                                    <div class="livebanner"><img src="zoro.jpg" alt=""></div>
-                                    <div class="livebanner"><img src="864471.jpg" alt=""></div>
-                                </div>
-                            </div>
-                            <div class="apartment-info">
-                                <div class="info">
-                                    <div class="name">
-                                        <h3 class="apartment-name">Sunrise Apartment</h3>
-                                    </div>
-                                    <div class="amount">
-                                        <h3 class="apart-price">15,000 Rs. P/M</h3>
-                                    </div>
-                                </div>
-                                <div class="apart-details">
-                                    <div class="description">
-                                        <p class="apartment-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque error nesciunt perspiciatis molestias commodi sequi.</p>
-                                    </div>
-                                    <div class="apartment-feature">
-                                        <div class="feature-icons">
-                                            <img class="icon1 icon" src="left-arrow.png" alt="">
-                                            <img class="icon2 icon" src="right-arrow.png" alt="">
-                                            <img class="icon3 icon" src="left-arrow.png" alt="">
-                                            <img class="icon4 icon" src="right-arrow.png" alt="">
-                                            <img class="icon5 icon" src="left-arrow.png" alt="">
-                                            <img class="icon6 icon" src="right-arrow.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="info-btn">
-                                    <button class="book-btn">Book Now</button>
-                                    <button class="save-btn">Save</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="apartment">
-                            <div class="bannerwrapper" data-banner>
-                                <div class="slides" livebanners>
-                                    <div class="livebanner" data-active><img src="xiao2.jpg" alt=""></div>
-                                    <div class="livebanner"><img src="zoro.jpg" alt=""></div>
-                                    <div class="livebanner"><img src="864471.jpg" alt=""></div>
-                                </div>
-                            </div>
-                            <div class="apartment-info">
-                                <div class="info">
-                                    <div class="name">
-                                        <h3 class="apartment-name">Sunrise Apartment</h3>
-                                    </div>
-                                    <div class="amount">
-                                        <h3 class="apart-price">15,000 Rs. P/M</h3>
-                                    </div>
-                                </div>
-                                <div class="apart-details">
-                                    <div class="description">
-                                        <p class="apartment-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque error nesciunt perspiciatis molestias commodi sequi.</p>
-                                    </div>
-                                    <div class="apartment-feature">
-                                        <div class="feature-icons">
-                                            <img class="icon1 icon" src="left-arrow.png" alt="">
-                                            <img class="icon2 icon" src="right-arrow.png" alt="">
-                                            <img class="icon3 icon" src="left-arrow.png" alt="">
-                                            <img class="icon4 icon" src="right-arrow.png" alt="">
-                                            <img class="icon5 icon" src="left-arrow.png" alt="">
-                                            <img class="icon6 icon" src="right-arrow.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="info-btn">
-                                    <button class="book-btn">Book Now</button>
-                                    <button class="save-btn">Save</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="apartment">
-                            <div class="bannerwrapper" data-banner>
-                                <div class="slides" livebanners>
-                                    <div class="livebanner" data-active><img src="xiao2.jpg" alt=""></div>
-                                    <div class="livebanner"><img src="zoro.jpg" alt=""></div>
-                                    <div class="livebanner"><img src="864471.jpg" alt=""></div>
-                                </div>
-                            </div>
-                            <div class="apartment-info">
-                                <div class="info">
-                                    <div class="name">
-                                        <h3 class="apartment-name">Sunrise Apartment</h3>
-                                    </div>
-                                    <div class="amount">
-                                        <h3 class="apart-price">15,000 Rs. P/M</h3>
-                                    </div>
-                                </div>
-                                <div class="apart-details">
-                                    <div class="description">
-                                        <p class="apartment-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque error nesciunt perspiciatis molestias commodi sequi.</p>
-                                    </div>
-                                    <div class="apartment-feature">
-                                        <div class="feature-icons">
-                                            <img class="icon1 icon" src="left-arrow.png" alt="">
-                                            <img class="icon2 icon" src="right-arrow.png" alt="">
-                                            <img class="icon3 icon" src="left-arrow.png" alt="">
-                                            <img class="icon4 icon" src="right-arrow.png" alt="">
-                                            <img class="icon5 icon" src="left-arrow.png" alt="">
-                                            <img class="icon6 icon" src="right-arrow.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="info-btn">
-                                    <button class="book-btn">Book Now</button>
-                                    <button class="save-btn">Save</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="apartment">
-                            <div class="bannerwrapper" data-banner>
-                                <div class="slides" livebanners>
-                                    <div class="livebanner" data-active><img src="xiao2.jpg" alt=""></div>
-                                    <div class="livebanner"><img src="zoro.jpg" alt=""></div>
-                                    <div class="livebanner"><img src="864471.jpg" alt=""></div>
-                                </div>
-                            </div>
-                            <div class="apartment-info">
-                                <div class="info">
-                                    <div class="name">
-                                        <h3 class="apartment-name">Sunrise Apartment</h3>
-                                    </div>
-                                    <div class="amount">
-                                        <h3 class="apart-price">15,000 Rs. P/M</h3>
-                                    </div>
-                                </div>
-                                <div class="apart-details">
-                                    <div class="description">
-                                        <p class="apartment-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque error nesciunt perspiciatis molestias commodi sequi.</p>
-                                    </div>
-                                    <div class="apartment-feature">
-                                        <div class="feature-icons">
-                                            <img class="icon1 icon" src="left-arrow.png" alt="">
-                                            <img class="icon2 icon" src="right-arrow.png" alt="">
-                                            <img class="icon3 icon" src="left-arrow.png" alt="">
-                                            <img class="icon4 icon" src="right-arrow.png" alt="">
-                                            <img class="icon5 icon" src="left-arrow.png" alt="">
-                                            <img class="icon6 icon" src="right-arrow.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="info-btn">
-                                    <button class="book-btn">Book Now</button>
-                                    <button class="save-btn">Save</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="apartment">
-                            <div class="bannerwrapper" data-banner>
-                                <div class="slides" livebanners>
-                                    <div class="livebanner" data-active><img src="xiao2.jpg" alt=""></div>
-                                    <div class="livebanner"><img src="zoro.jpg" alt=""></div>
-                                    <div class="livebanner"><img src="864471.jpg" alt=""></div>
-                                </div>
-                            </div>
-                            <div class="apartment-info">
-                                <div class="info">
-                                    <div class="name">
-                                        <h3 class="apartment-name">Sunrise Apartment</h3>
-                                    </div>
-                                    <div class="amount">
-                                        <h3 class="apart-price">15,000 Rs. P/M</h3>
-                                    </div>
-                                </div>
-                                <div class="apart-details">
-                                    <div class="description">
-                                        <p class="apartment-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque error nesciunt perspiciatis molestias commodi sequi.</p>
-                                    </div>
-                                    <div class="apartment-feature">
-                                        <div class="feature-icons">
-                                            <img class="icon1 icon" src="left-arrow.png" alt="">
-                                            <img class="icon2 icon" src="right-arrow.png" alt="">
-                                            <img class="icon3 icon" src="left-arrow.png" alt="">
-                                            <img class="icon4 icon" src="right-arrow.png" alt="">
-                                            <img class="icon5 icon" src="left-arrow.png" alt="">
-                                            <img class="icon6 icon" src="right-arrow.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="info-btn">
-                                    <button class="book-btn">Book Now</button>
-                                    <button class="save-btn">Save</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="apartment">
-                            <div class="bannerwrapper" data-banner>
-                                <div class="slides" livebanners>
-                                    <div class="livebanner" data-active><img src="xiao2.jpg" alt=""></div>
-                                    <div class="livebanner"><img src="zoro.jpg" alt=""></div>
-                                    <div class="livebanner"><img src="864471.jpg" alt=""></div>
-                                </div>
-                            </div>
-                            <div class="apartment-info">
-                                <div class="info">
-                                    <div class="name">
-                                        <h3 class="apartment-name">Sunrise Apartment</h3>
-                                    </div>
-                                    <div class="amount">
-                                        <h3 class="apart-price">15,000 Rs. P/M</h3>
-                                    </div>
-                                </div>
-                                <div class="apart-details">
-                                    <div class="description">
-                                        <p class="apartment-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque error nesciunt perspiciatis molestias commodi sequi.</p>
-                                    </div>
-                                    <div class="apartment-feature">
-                                        <div class="feature-icons">
-                                            <img class="icon1 icon" src="left-arrow.png" alt="">
-                                            <img class="icon2 icon" src="right-arrow.png" alt="">
-                                            <img class="icon3 icon" src="left-arrow.png" alt="">
-                                            <img class="icon4 icon" src="right-arrow.png" alt="">
-                                            <img class="icon5 icon" src="left-arrow.png" alt="">
-                                            <img class="icon6 icon" src="right-arrow.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="info-btn">
-                                    <button class="book-btn">Book Now</button>
-                                    <button class="save-btn">Save</button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        
-                        <button id="viewMore">View More</button>    
-                    </div>
-                </div>
-            </div> 
+        <div class="direction">
+            <button class="back-btn">Back</button>
+            <h2 class="heading">Saved Apartments</h2>
+            <div></div>
         </div>
 
+        <div class="apartment-comp">
+            <div class="save-card">
+                <div class="save-card-img">
+                    <img src="/Images/apartment1.jpg" alt="img" draggable="false">
+                </div>
+                <div class="save-card-content">
+                    <div class="save-card-details">
+                        <h3>Blanche Pearson</h3>
+                        <h3>$500 P/M</h3>
+                    </div>
+                    <div class="save-card-address"><p>Location</p></div>
+                    <div class="serviceIcons">
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                    </div>
+                    <div class="save-card-btns">
+                        <button class="save-book-btn">Book Now</button>
+                        <button class="remove-btn">Save For Later</button>
+                    </div>
+                </div>
+            </div>
+            <div class="save-card">
+                <div class="save-card-img">
+                    <img src="/Images/apartment1.jpg" alt="img" draggable="false">
+                </div>
+                <div class="save-card-content">
+                    <div class="save-card-details">
+                        <h3>Blanche Pearson</h3>
+                        <h3>$500 P/M</h3>
+                    </div>
+                    <div class="save-card-address"><p>Location</p></div>
+                    <div class="serviceIcons">
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                    </div>
+                    <div class="save-card-btns">
+                        <button class="save-book-btn">Book Now</button>
+                        <button class="remove-btn">Save For Later</button>
+                    </div>
+                </div>
+            </div>
+            <div class="save-card">
+                <div class="save-card-img">
+                    <img src="/Images/apartment1.jpg" alt="img" draggable="false">
+                </div>
+                <div class="save-card-content">
+                    <div class="save-card-details">
+                        <h3>Blanche Pearson</h3>
+                        <h3>$500 P/M</h3>
+                    </div>
+                    <div class="save-card-address"><p>Location</p></div>
+                    <div class="serviceIcons">
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                    </div>
+                    <div class="save-card-btns">
+                        <button class="save-book-btn">Book Now</button>
+                        <button class="remove-btn">Save For Later</button>
+                    </div>
+                </div>
+            </div>
+            <div class="save-card">
+                <div class="save-card-img">
+                    <img src="/Images/apartment1.jpg" alt="img" draggable="false">
+                </div>
+                <div class="save-card-content">
+                    <div class="save-card-details">
+                        <h3>Blanche Pearson</h3>
+                        <h3>$500 P/M</h3>
+                    </div>
+                    <div class="save-card-address"><p>Location</p></div>
+                    <div class="serviceIcons">
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                    </div>
+                    <div class="save-card-btns">
+                        <button class="save-book-btn">Book Now</button>
+                        <button class="remove-btn">Save For Later</button>
+                    </div>
+                </div>
+            </div>
+            <div class="save-card">
+                <div class="save-card-img">
+                    <img src="/Images/apartment1.jpg" alt="img" draggable="false">
+                </div>
+                <div class="save-card-content">
+                    <div class="save-card-details">
+                        <h3>Blanche Pearson</h3>
+                        <h3>$500 P/M</h3>
+                    </div>
+                    <div class="save-card-address"><p>Location</p></div>
+                    <div class="serviceIcons">
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                    </div>
+                    <div class="save-card-btns">
+                        <button class="save-book-btn">Book Now</button>
+                        <button class="remove-btn">Save For Later</button>
+                    </div>
+                </div>
+            </div>
+            <div class="save-card">
+                <div class="save-card-img">
+                    <img src="/Images/apartment1.jpg" alt="img" draggable="false">
+                </div>
+                <div class="save-card-content">
+                    <div class="save-card-details">
+                        <h3>Blanche Pearson</h3>
+                        <h3>$500 P/M</h3>
+                    </div>
+                    <div class="save-card-address"><p>Location</p></div>
+                    <div class="serviceIcons">
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-regular fa-building fa-2xl"></i>
+                    </div>
+                    <div class="save-card-btns">
+                        <button class="save-book-btn">Check Now</button>
+                        <button class="remove-btn">Save For Later</button>
+                    </div>
+                </div>
+            </div>
+            <div class="view-more">
+                <button>View More</button>
+            </div>
+        </div>
     </main>
 
     <footer>

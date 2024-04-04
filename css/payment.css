@@ -168,238 +168,139 @@ button.back-btn{
     background-color: lightgrey
 }
 
+
 .container{
-    margin: 2rem 0;
-    display: flex;
-    justify-content: center;
-}
-
-.apartment{
-    padding: 15px;
-    width: 850px;
-    height: auto;
-    display: grid;
-    grid-template-columns: 350px 1fr;
-    grid-column-gap: 2rem;
-    border-radius: 10px;
-    border: 2px solid black;
-    margin-bottom: 2rem;
-}
-
-.bannerwrapper{
-    overflow: hidden;
-    width: 350px;
-    height: 200px;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-}
-
-.slides{
-    width: 100%;
-    height: 200px;
-}
-
-img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.livebanner:not([data-active]) {
-    display: none;
-}
-
-.apartment-info{
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    height: auto;
+    justify-content: space-between;
+    margin-bottom: 3rem;
 }
 
-.info{
+.card {
+    width: 450px;
+    height: auto;
+    background: #edefee;
+    cursor: pointer;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+  
+.card > .img {
+    background: #8B53FF;
+    width: auto;
+    height: 250px;
+    border-radius: 10px;
+}
+  
+.img > img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .apart-details{
+    width: 100%;
     display: flex;
     justify-content: space-between;
+}
+
+.address{
     width: 100%;
+    text-align: left;
 }
 
-.description{
-    width: 100%;
-}
-
-h3.apartment-name{
-    font-size: 21px;
-}
-
-.apartment-feature{
-    width: 200px;
-    height: auto;
-
-}
-
-.feature-icons{
+.serviceIcons{
     display: flex;
     flex-wrap: wrap;
-    width: auto;
-    height: auto;
+    justify-content: space-between;
+    margin: 1rem 0;
 }
 
-img.icon{
-    width: 35px;
-    height: 35px;
-    object-fit: cover;
-    border-radius: 40%;
-    margin: 3px 5px;
-    border: 1px solid grey;
+.payment-option{
+        width: 650px;
+        height: 100%;
+        background: #edefee;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        margin: auto 0;
+}
+
+#card-payment{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card-pay{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input{
+    width: auto;
+    margin-top: 10px;
+    padding: 1rem;
+    width: auto;
+    border-radius: 10px;
+    border: 2px solid lightgray;
+}
+
+#card-no{
+    width: 300px;
+}
+
+#cvv-no{
+    width: 100px;
+}
+
+.pay-btn > button{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: rgb(113, 146, 113);
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.pay-btn > button:hover{
+    background-color: #245e39;
+}
+
+
+span{
+    margin-left: 2rem;
 }
 
 @media screen and (max-width: 768px) {
     main{
-        margin: 2rem 0.5rem;
+        margin: 0 auto;
     }
 
-    .direction{
-        margin: 0;
-        display: flex;
-        justify-content: space-between;
-        text-align: center;
+    .container{
+        gap: 1.5rem;
     }
 
-    .back{
-        margin-right: 1.5rem;
+    .card-pay{
+        gap: 10px;
     }
 
-    .apartment{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+    #card-no{
+        width: 360px;
     }
-
-    .apartment-info{
-        margin-top: 1rem;
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .apart-details{
-        margin-top: 1rem;
-        justify-content: center;
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .description{
-        text-align: center;
-    }
-
-    .apartment-feature{
-        margin-top: 1rem;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-}
-
-
-.payment-option{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.head{
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.card-pay{
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    justify-content: left;
-    margin-bottom: 2rem;
-    
-}
-
-.card-details{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 1rem;
-    margin-left: 1rem;
-    margin-bottom: 1rem;
-    width: 100%;
-    height: auto;
-}
-
-#card-no{
-    margin-top: 10px;
-    width: 100%;
-    height: 50px;
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px solid gray;
-}
-
-#cvv-no{
-    margin-top: 10px;
-    width: 100%;
-    height: 50px;
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px solid gray;
-}
-
-.expiry-date{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-#day{
-    margin-top: 10px;
-    width: 100%;
-    height: 50px;
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px solid gray;
-}
-
-#month{
-    margin-top: 10px;
-    width: 100%;
-    height: 50px;
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px solid gray;
-}
-
-#year{
-    margin-top: 10px;
-    width: 100%;
-    height: 50px;
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px solid gray;
-}
-
-#cash{
-    margin-bottom: 2rem;
-
-}
-
-button.pay{
-    width: 100%;
-    padding: 1rem;
-    font-size: 20px;
-    font-weight: 600;
-    border-radius: 10px;
-    margin-bottom: 2rem;
 }
 
 

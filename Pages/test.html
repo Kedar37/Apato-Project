@@ -3,81 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/test.css">
   <title>Document</title>
 
-  <link rel="stylesheet" href="/css/test.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
 </head>
 <body>
-  <div class="main-container">
-    <div class="form-container">
-        <form action="" class="sell-form">
+  <div class="container">
+    <div class="img">
+      <img src="/Images/promo-img.jpg" alt="">
+    </div>
+    <div class="login-form">
+      <div class="logo">
+        <img src="/Images/logo-png.png" alt="">
+      </div>
+      <div class="login">
+        <h2>Sign Up</h2>
+        <form action="">
           <div class="field">
-            <label for="name">Property Name</label><br>
-            <input type="text" id="name" name="name" placeholder=" " required minlength="3">
+            <label for="name">Full name</label>
+            <input type="text" name="name" id="name" required min="2">
           </div>
           <div class="field">
-            <label for="address">Property Address</label><br>
-            <input type="text" id="address" name="address" placeholder=" " required minlength="10">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
           </div>
           <div class="field">
-            <label for="rent">Rent Amount</label><br>
-            <input type="text" id="rent" name="rent" placeholder=" " required minlength="2">
+            <label for="pass">Create Password</label>
+            <input type="password" required min="6">
           </div>
           <div class="field">
-            <label for="details">Description</label><br>
-            <textarea name="details" id="details" cols="30" rows="10"></textarea>
+            <label for="confirm-pass">Confirm Password</label>
+            <input type="password" required min="6">
           </div>
-          <div class="apartment-type">
-            <h4 class="room-type-heading">Services</h4>
-            <div class="option-wrapper">
-                <div class="options">
-                    <input type="radio" name="one" class="radio" id="one" checked>
-                    <label for="one" class="option-label active-option">One</label>
-                </div>
-                <div class="options">
-                    <input type="radio" name="one" class="radio" id="two">
-                    <label for="two" class="option-label">two</label>
-                </div>
-                <div class="options">
-                    <input type="radio" name="one" class="radio" id="three">
-                    <label for="three" class="option-label">three</label>
-                </div>
-                <div class="options">
-                    <input type="radio" name="one" class="radio" id="four">
-                    <label for="four" class="option-label">four</label>
-                </div>
-                <div class="options">
-                    <input type="radio" name="one" class="radio" id="five">
-                    <label for="five" class="option-label">five</label>
-                </div>
-                <div class="options">
-                    <input type="radio" name="one" class="radio" id="six">
-                    <label for="six" class="option-label">six</label>
-                </div>
-                <div class="options">
-                    <input type="radio" name="one" class="radio" id="seven">
-                    <label for="seven" class="option-label">seven</label>
-                </div>
-                <div class="options">
-                    <input type="radio" name="one" class="radio" id="eight">
-                    <label for="eight" class="option-label">eight</label>
-                </div>
-            </div>
+          <div class="submit-btn">
+            <button>Create account</button>
           </div>
         </form>
-    </div>
-    <div class="upload-images">
-      <div class="main-upload-img">
-        <img src="/Images/apartment1.jpg" alt="">
-      </div>
-      <div class="small-display-img">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-      </div>
-      <div class="uploadBtn">
-        <button>Upload Photos</button>
+        <div class="google">
+          <button>Login with Google</button>
+        </div>
       </div>
     </div>
   </div>

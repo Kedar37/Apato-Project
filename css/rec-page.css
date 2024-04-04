@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
     outline: none;
     border: none;
+    letter-spacing: 1.2px;
 }
 
 body{
@@ -135,7 +139,7 @@ ul.menulists>li:hover {
 }
 
 main{
-    margin: 0 5rem;
+    margin: 0 3rem;
 }
 
 .recommandation{
@@ -152,7 +156,7 @@ main{
 .direction{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
 }
 
 button.back-btn{
@@ -165,373 +169,115 @@ button.back-btn{
     cursor: pointer;
 }
 
-.components{
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    grid-column-gap: 2rem;
-}
-
-.filter-comp{
-    width: 100%;
-    height: 800px;
-    border: 2px solid black;
-    border-radius: 10px;
-    overflow-y: scroll;
-}
-
-.head-name{
-    width: 100%;
-    height: 4rem;
+.apartment-comp{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 2rem 0;
 }
 
-h3.filter-n{
-    font-weight: 700;
-}
-
-.map{
-    width: 100%;
-    position: relative;
-    height: 250px;
-    background-image: "zoro.jpg";
-    text-align: center;
-}
-
-.divider{
-    height: 2px;
-    width: 100%;
-    background-color: grey;
-    margin-bottom: 1rem;
-}
-
-button.location-btn{
-    padding: 10px;
-    border-radius: 5px;
-    width: 200px;
-    margin-top: 65%;
-    border: none;
-    color: white;
-    background-color: rgb(26, 67, 47);
+.save-card {
+    width: 380px;
+    height: auto;
+    background: #eeeeee;
+    transition: all 0.4s ease;
     cursor: pointer;
 }
-
-.price-range{
-    padding: 1rem;
+  
+.save-card .save-card-img {
+    background: #8B53FF;
+    width: 380px;
+    height: 250px;
+}
+  
+.save-card .save-card-img img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
 }
 
-label{
-    font-weight: 500;
-    margin-bottom: 10px;
-    font-size: 1rem;
+.save-card-content{
+    width: 380px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-#price-range{
-    width: 250px;
-}
-
-.min-max{
-    margin-top: 10px;
+.save-card-details{
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-#min-budget{
-    width: 70px;
-    border: 1px solid black;
-    height: 30px;
-    border-radius: 5px;
-}
-
-#max-budget{
-    width: 70px;
-    border: 1px solid black;
-    height: 30px;
-    border-radius: 5px;
-}
-
-.apartment-type{
+.save-card-address{
     width: 100%;
-    height: auto;
-    padding: 1rem;
-
+    text-align: left;
 }
 
-.option-wrapper{
+.serviceIcons{
     display: flex;
     flex-wrap: wrap;
-    gap: 13px;
+    justify-content: space-between;
+    margin: 1rem 0;
 }
 
-.room-btns{
-    width: auto;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.room-btn{
-    padding: 0.5rem;
-    outline: none;
-    border: 1px solid black;
-    border-radius: 7px;
-    background-color: white;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.selected {
-    background-color: lightblue;
-}
-
-.search-by-city{
-    padding: 1rem;
+.save-card-btns{
     width: 100%;
-    height: auto;
 }
 
-h4{
-    margin-bottom: 20px;
-}
-
-a{
-    text-decoration: none;
-    color: black;
-}
-
-.cities{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-    margin-bottom: 10px;
-}
-
-.ratings{
-    padding: 1rem;
-}
-
-#rating{
-    outline: none;
-    border: none;
-}
-
-#rate{
+.save-card-btns > button{
     margin: 10px 0;
 }
 
-.fil-ser-btn{
-    margin: 2rem 0;
-    text-align: center;
-}
-
-button.filter-search-btn{
+.save-book-btn{
+    width: 100%;
     padding: 1rem;
-    border-radius: 10px;
-    width: 200px;
+    background-color: rgb(113, 146, 113);
     font-weight: 600;
-    font-size: 1rem;
-    color: white;
-    background-color: rgb(26, 67, 47);
+    font-size: 18px;
     cursor: pointer;
+    color: white;
 }
 
-.apartment-comp{
-    width: 1fr;
-    height: 800px;
-    overflow-y: scroll;
+.save-book-btn:hover{
+    background-color: #326946;
+    color: white;
 }
 
-.apartment{
+.remove-btn{
+    width: 100%;
     padding: 1rem;
-    height: auto;
-    display: grid;
-    grid-template-columns: 350px 350px;
-    grid-column-gap: 2rem;
-    border-radius: 10px;
-    border: 2px solid black;
-    margin-bottom: 2rem;
-}
-
-.bannerwrapper{
-    overflow: hidden;
-    width: 350px;
-    height: 200px;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-}
-
-.slides{
-    width: 100%;
-    height: 200px;
-}
-
-img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.livebanner:not([data-active]) {
-    display: none;
-}
-
-.apartment-info{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    height: auto;
-}
-
-.info{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.apart-details{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.apartment-description{
-    width: 200px;
-    height: auto;
-}
-
-h3.apartment-name{
-    font-size: 21px;
-}
-
-.apartment-feature{
-    width: 140px;
-    height: auto;
-}
-
-.feature-icons{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: auto;
-    height: auto;
-}
-
-img.icon{
-    width: 35px;
-    height: 35px;
-    object-fit: cover;
-    border-radius: 40%;
-    margin: 3px 5px;
-    border: 1px solid grey;
-}
-
-.info-btn{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-button.book-btn{
-    width: 200px;
-    padding: 15px;
-    font-size: 15px;
+    border: 2px solid #ababab;
     font-weight: 600;
-    border-radius: 7px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #ababab;
+}
+
+.remove-btn:hover{
     border: none;
+    background-color: #ababab;
     color: white;
-    background-color: rgb(26, 67, 47);
-    cursor: pointer;
 }
 
-button.save-btn{
-    width: 130px;
-    padding: 15px;
-    font-size: 15px;
-    font-weight: 600;
-    border-radius: 7px;
-    border: 2px solid black;
-    background-color: white;
-    cursor: pointer;
-}
-
-
-
-@media screen and (max-width: 768px) {
-    main{
-        margin: 2rem 0.5rem;
-    }
-
-    .direction{
-        margin: 0;
-        display: flex;
-        justify-content: space-between;
-        text-align: center;
-    }
-
-    .back{
-        margin-right: 1.5rem;
-    }
-
-    .apartment{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .apartment-info{
-        margin-top: 1rem;
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .apart-details{
-        margin-top: 1rem;
-        justify-content: center;
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .description{
-        text-align: center;
-    }
-
-    .apartment-feature{
-        margin-top: 1rem;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-}
-
-
-
-h3.apart-price{
-    margin-bottom: 15px;
-}
-
-.feature-icons{
-    width: auto;
-    height: auto;
-    margin-bottom: 19px;
-}
-
-.view{
+.view-more{
+    width: 100%;
     text-align: center;
 }
 
-a.view-more{
-    text-decoration: none;
+.view-more > button{
+    padding: 1rem;
+    border: 2px solid #ababab;
+    font-size: 16px;
+    font-weight: 550;
+    background-color: transparent;
+    color: #ababab;
 }
 
-#viewMore{
-    text-align: center;
+.view-more > button:hover{
+    background-color: #ababab;
+    color: white;
 }
 
 footer{
