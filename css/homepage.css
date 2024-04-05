@@ -8,6 +8,7 @@
     outline: none;
     border: none;
     letter-spacing: 1.2px;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -23,6 +24,7 @@ header{
     padding: 1rem;
     z-index: 1;
     margin: 0;
+    background-color: rgb(113, 146, 113);
 }
 
 .navbar{
@@ -51,22 +53,11 @@ nav a{
     list-style: none;
     text-decoration: none;
     font-weight: 600;
+    color: white;
 }
 
 nav a:hover{
     text-decoration: underline;
-}
-
-button.filter-icon{
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    margin-right: 1rem;
-    background-color: #fff;
-}
-
-button.filter-icon:hover{
-    background-color: #e0ffda;
 }
 
 .profile{
@@ -75,14 +66,6 @@ button.filter-icon:hover{
     border-radius: 50%;
     margin-right: 1rem;
     background-color: #fff;
-}
-
-.search-bar{
-    padding: 0.5rem;
-    width: 20rem;
-    border: 2px solid lightgrey;
-    outline: none;
-    margin-right: 1rem;
 }
 
 .icons{
@@ -149,203 +132,59 @@ main{
     margin: auto;
 }
 
-.component-wrapper{
-    width: auto;
+
+.search-container{
+    width: 100%;
     height: auto;
-    z-index: 2;
-    position: absolute;
-    padding: 1rem;
-    background-color: #fff;
-    margin: 0 5rem;
+    padding: 1rem 0;
 }
 
-.direction{
-    display: flex;
-    justify-content: space-between;
-    margin: 2rem 0;
+.search-bar{
+    width: 80%;
+    border: 2px solid lightgray;
+    padding: 10px;
+    margin: 0 auto;
 }
 
-button.back-btn{
-    padding: 5px;
-    border: none;
-    outline: none;
-    background-color: transparent;
-    color: black;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.filter-comp{
+form{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 3rem;
-    padding: 2rem;
-    border: 2px solid black;
-    justify-content: center;
-    width: auto;
-    height: auto;
+    grid-template-columns: 2fr 1fr 0.5fr 1fr;
+    gap: 20px;
 }
 
-.advance-search1{
-    text-align: center;
-}
-
-.location-search{
-    width: 400px;
-    height: 400px;
-    border: 2px solid black;
-    border-radius: 10px;
-    text-align: center;
-}
-
-button.map-btn{
-    position: relative;
-    top: 80%;
+.location-search > input{
+    width: 100%;
+    border: 2px solid lightgray;
     padding: 1rem;
-    border-radius: 10px;
-    width: 300px;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 16px;
 }
 
-.advance-search2{
-    width: 300px;
-}
-
-.price-range{
+select{
     width: 100%;
-    height: auto;
-    margin-bottom: 4rem;
-}
-
-label{
-    margin-bottom: 10px;
-    font-size: 1rem;
-    font-weight: 500;
-}
-
-#price-range{
-    width: 100%;
-}
-
-.min-max{
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
-}
-
-#min-budget{
-    width: 120px;
-    border: 1px solid black;
-    height: 40px;
-    border-radius: 10px;
-}
-
-#max-budget{
-    width: 120px;
-    border: 1px solid black;
-    height: 40px;
-    border-radius: 10px;
-}
-
-.advance-search3{
-    width: 300px;
-}
-
-.search-by-city{
-    width: 100%;
-    height: auto;
-    margin-bottom: 3rem;
-}
-
-h4{
-    margin-bottom: 2rem;
-}
-
-a{
-    text-decoration: none;
-    color: black;
-}
-
-.cities{
-    width: auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-
-
-.apartment-type{
-    margin-bottom: 3rem;
-}
-
-.room-btns{
-    width: auto;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-}
-
-.room-btn{
+    border: 2px solid lightgray;
     padding: 1rem;
-    outline: none;
-    border: 2px solid black;
-    border-radius: 10px;
-    background-color: white;
+    font-weight: 600;
+}
+
+.filter button{
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid lightgray;
     cursor: pointer;
 }
 
-
-
-#rating{
-    outline: none;
-    border: none;
-}
-
-#rate{
-    margin: 10px 0;
-}
-
-button.filter-search-btn{
-    margin-top: 1rem;
+.search-btn{
     width: 100%;
-    padding: 1rem;
+}
+
+.search-btn > button{
+    width: 100%;
+    padding: 0.9rem;
+    border: 2px solid lightgray;
     font-weight: 600;
-    font-size: 20px;
-    border-radius: 10px;
-    background-color: lightblue;
-}
-
-@media screen and (max-width: 1300px) {
-    .filter-comp{
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .advance-search2{
-        margin-top: 3rem;
-    }
-
-    .advance-search3{
-        margin-top: 3rem;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .filter-comp{
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .advance-search2{
-        margin-top: 3rem;
-    }
-
-    .advance-search3{
-        margin-top: 3rem;
-    }
+    font-size: 16px;
+    cursor: pointer;
 }
 
 
@@ -423,6 +262,9 @@ button.filter-search-btn{
 
 @media screen and (max-width: 768px) {
 
+    .search-bar{
+        width: 100%;
+    }
 
     .service-img img{
         height: 0;
@@ -580,17 +422,16 @@ button.filter-search-btn{
     width: auto;
     padding: 15px 20px;
     background-color: transparent;
-    border: 2px solid rgb(33, 33, 33);
-    color: rgb(33, 33, 33);
+    border: 2px solid #ababab;
+    color: #ababab;
     font-weight: 600;
     font-size: 16px;
     transition: all 0.3s ease;
 }
 
 .view-more-btn:hover{
-    border: 2px solid rgb(113, 146, 113);
     color: #ffffff;
-    background-color: rgb(113, 146, 113);
+    background-color: #ababab;
 }
 
 @media screen and (max-width: 950){
@@ -627,7 +468,7 @@ button.filter-search-btn{
 }
 
 .promo-title{
-    width: 600px;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
     display: flex;
@@ -756,26 +597,25 @@ button.filter-search-btn{
 }
 
 footer{
+    display: flex;
+    justify-content: center;
     background-color: rgb(7, 40, 7);
     width: 100%;
     height: auto;
+    padding: 3rem;
 }
 
 .links{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-content: space-evenly;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 3rem;
-    margin: 0 5rem;
 }
 
 .companyinfo{
     width: auto;
     height: auto;
     align-content: center;
-    margin-left: 5rem;
 }
 
 .footerlogo{
@@ -826,4 +666,51 @@ button.sns1{
 
 .navigation{
     margin: 30px 0;
+}
+
+@media screen and (max-width:768px) {
+    .links{
+        display: grid;
+        grid-template-columns: 130px 1fr;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .medialinks{
+        width: auto;
+        height: auto;
+        margin: 0 1.5rem;
+    }
+}
+
+
+
+/* scroll animation */
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s ease;
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.service-content:nth-child(1){
+    transition-delay: 400ms;
+}
+
+.promo-card:nth-child(2){
+    transition-delay: 200ms;
+}
+
+.promo-card:nth-child(3){
+    transition-delay: 400ms;
+}
+
+.promo-card:nth-child(4){
+    transition-delay: 600ms;
 }

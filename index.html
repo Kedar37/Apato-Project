@@ -22,96 +22,23 @@
                 <a href="#">For Buyers</a>
 
                 <div class="icons">
-                    <button class="filter-icon" onclick="showScreen()"><i class="fa-solid fa-filter"></i></button>
-                    <input type="search" placeholder="search" class="search-bar">
                     <img src="Images/profilepic.jpg" class="profile" alt="">
                 </div>
                 <button class="menubtn" ><i class="fa-solid fa-bars fa-2xl"></i></button>
-                        <ul class="menulists">
+                        <!-- <ul class="menulists">
                             <li>Services</li>
                             <li>For Owners</li>
                             <li>For Buyers</li>
                             <li>Get Help</li>
-                        </ul>
+                        </ul> -->
             </nav>
         </div>
     </header>
 
     <main>
-        <div class="component-wrapper" id="filter">
-            <div class="direction">
-                <button class="back-btn" onclick="hideScreen()">Back</button>
-                <h2 class="heading">Filter Search</h2>
-                <div></div>
-            </div>
-    
-            <div class="filter-comp">
-                <div class="advance-search1">
-                    <div class="location-search">
-                        <button class="map-btn">Search</button>
-                    </div>
-                </div>
-    
-                <div class="advance-search2">
-                    <div class="price-range">
-                        <h4>Adjust budget</h4>
-                        <input type="range" id="price-range" name="price-range" min="5000" max="100000" value="10000" oninput="this.nextElementSibling.value = this.value">
-                        <output>10000</output>
-                        <div class="min-max">
-                            <div class="min-budget">
-                                <label for="min-budget">Min</label> <br>
-                                <input type="text" id="min-budget" name="min-budget" placeholder="" required minlength="3"> 
-                            </div>
-                            <div class="max-budget">
-                                <label for="max-budget">Max</label> <br>
-                                <input type="text" id="max-budget" name="max-budget" placeholder="" required minlength="3"> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="search-by-city">
-                        <h4>Popular cities</h4>
-                        <div class="cities">
-                            <a href="" class="city1">Mumbai</a>
-                            <a href="" class="city1">Delhi</a>
-                            <a href="" class="city1">Chennai</a>
-                            <a href="" class="city1">Pune</a>
-                            <a href="" class="city1">Bangalore</a>
-                            <a href="" class="city1">Goa</a>
-                            <a href="" class="city1">Surat</a>
-                            <a href="" class="city1">Manali</a>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="advance-search3">
-                    <div class="apartment-type">
-                        <h4 class="room-type-heading">Apartment type</h4>
-                        <div class="room-btns">
-                            <button class="btn1 room-btn">1RK</button>
-                            <button class="btn2 room-btn">2RK</button>
-                            <button class="btn3 room-btn">1BHK</button>
-                            <button class="btn4 room-btn">2BHK</button>
-                            <button class="btn5 room-btn">3BHK</button>
-                            <button class="btn6 room-btn">4BHK</button>
-                        </div>
-                    </div>
-                        <div class="ratings">
-                            <h4>Ratings</h4>
-                            <fieldset id="rating">
-                                <input type="radio" id="rate" value="5star" name="rating">  5 Star <br>
-                                <input type="radio" id="rate" value="4star" name="rating">  4 Star <br>
-                                <input type="radio" id="rate" value="3star" name="rating">  3 Star <br>
-                            </fieldset>
-                        </div>
-                </div>
-            </div>
-    
-            <button class="filter-search-btn">Search</button>
-        </div>
-
         <div class="service-container">
             <div class="sub-container">
-                <div class="service-content">
+                <div class="service-content hidden">
                     <h2 class="service-title">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, repudiandae!</h2>
                     <p class="service-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis corrupti harum aut iste et! Nostrum ad sit asperiores earum rerum, corrupti aliquid placeat vel.</p>
                     <div class="service-form">
@@ -121,9 +48,34 @@
                     <p class="note">* Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, sint.</p>
                     <div class="divider"></div>
                 </div>
-                <div class="service-img">
+                <div class="service-img hidden">
                     <img src="Images/apartment2.jpg" alt=""/>
                 </div>
+            </div>
+        </div>
+
+        <div class="search-container">
+            <div class="search-bar">
+                <form action="">
+                    <div class="location-search">
+                        <input type="text" placeholder="search by city" required>
+                    </div>
+                    <div class="apartment-type">
+                        <select name="" id="">
+                            <option value="">1Rk</option>
+                            <option value="">2Rk</option>
+                            <option value="">1bhk</option>
+                            <option value="">2bhk</option>
+                            <option value="">3bhk</option>
+                        </select>
+                    </div>
+                    <div class="filter">
+                        <button><i class="fa-solid fa-filter fa-xl"></i></button>
+                    </div>
+                    <div class="search-btn">
+                        <button type="submit">Search</button>
+                    </div>
+                </form>
             </div>
         </div>
 
@@ -134,7 +86,7 @@
                     <p class="promo-para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat laboriosam repellat enim natus! Eligendi sit harum saepe ea, reiciendis nisi.</p>
                 </div>
                 <div class="promo-cards">
-                    <div class="promo-card">
+                    <div class="promo-card hidden">
                         <div class="card-topline"></div>
                         <div class="promo-info">
                             <i class="fa-regular fa-building fa-2xl"></i>
@@ -142,7 +94,7 @@
                             <p class="promo-card-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, veritatis?</p>
                         </div>
                     </div>
-                    <div class="promo-card">
+                    <div class="promo-card hidden">
                         <div class="card-topline"></div>
                         <div class="promo-info">
                             <i class="fa-regular fa-building fa-2xl"></i>
@@ -150,7 +102,7 @@
                             <p class="promo-card-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, veritatis?</p>
                         </div>
                     </div>
-                    <div class="promo-card">
+                    <div class="promo-card hidden">
                         <div class="card-topline"></div>
                         <div class="promo-info">
                             <i class="fa-regular fa-building fa-2xl"></i>
@@ -158,7 +110,7 @@
                             <p class="promo-card-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, veritatis?</p>
                         </div>
                     </div>
-                    <div class="promo-card">
+                    <div class="promo-card hidden">
                         <div class="card-topline"></div>
                         <div class="promo-info">
                             <i class="fa-regular fa-building fa-2xl"></i>
@@ -170,7 +122,7 @@
             </div>
         </div>
 
-    <div class="card-slider-container">
+    <div class="card-slider-container hidden">
     <div class="wrapper">
         <div class="title"><h2>Recommendation for you</h2>
         <div class="slide-btns">
@@ -252,12 +204,12 @@
       </div>
     </div>
 
-    <div class="tips-container">
+    <div class="tips-container hidden">
         <div class="tip-content">
-            <div class="tip-image">
+            <div class="tip-image hidden">
                 <img src="Images/ad3.jpg" class="tip-img" alt="">
             </div>
-            <div class="tip-info">
+            <div class="tip-info hidden">
                 <h3 class="tip-head">For those who wants to sell!</h3>
                 <p class="tip">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. In dolorem consequatur labore maxime explicabo, est ipsa beatae ab quidem repellendus. Nulla, sapiente accusantium dolorum odit iure voluptatum praesentium ab soluta! 
@@ -274,7 +226,7 @@
 <footer>
     <div class="links">
         <div class="companyinfo">         
-            <a href="#" class="companylogo"><img src="Images/logo-png.png" class="footerlogo" alt=""></a>
+            <a href="#" class="companylogo"><img src="../Images/logo-png.png" class="footerlogo" alt=""></a>
             <div class="snslinks">
                 <button class="sns1"><i class="fa-brands fa-facebook-f fa-xl" style="color: #0091ff;"></i></i></button>
                 <button class="sns1"><i class="fa-brands fa-instagram fa-xl" style="color: #fe1650;"></i></button>
@@ -299,13 +251,11 @@
         </div>
         </div>
     </div>
-
 </footer>
 
 <script src="Js/slider.js"></script>
 <script src="Js/app.js"></script>
-<script src="Js/menu.js"></script>
-<script src="Js/filter.js"></script>
+<script src="Js/scrollanime.js"></script>
 
 </body>
 </html>

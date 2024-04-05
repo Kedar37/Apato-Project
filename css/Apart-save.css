@@ -508,3 +508,15 @@ button.sns1{
         margin: 0 1.5rem;
     }
 }
+
+
+
+/* scroll animation */
+.hidden{
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.show{
+    opacity: 1;
+}

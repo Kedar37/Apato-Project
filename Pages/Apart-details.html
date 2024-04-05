@@ -18,29 +18,27 @@
     <header>
         <div class="navbar">
             <nav>
-                <a href="#" class="logo"><img class="web-logo" src="../Images/logo-png.png" alt=""></a>
+                <a href="#" class="logo"><img class="web-logo" src="Images/logo-png.png" alt=""></a>
                 <a href="#">For Owners</a>
                 <a href="#">For Buyers</a>
 
                 <div class="icons">
-                    <button class="filter-icon"><i class="fa-solid fa-filter" style="color: #1f5131;"></i></button>
-                    <input type="search" placeholder="search" class="search-bar">
-                    <img src="" class="profile" alt="">
+                    <img src="Images/profilepic.jpg" class="profile" alt="">
                 </div>
-                <button class="menubtn"><i class="fa-solid fa-bars fa-2xl" style="color: #1f5131;"></i></button>
-                        <ul class="menulists">
+                <button class="menubtn" ><i class="fa-solid fa-bars fa-2xl"></i></button>
+                        <!-- <ul class="menulists">
                             <li>Services</li>
                             <li>For Owners</li>
                             <li>For Buyers</li>
                             <li>Get Help</li>
-                        </ul>
+                        </ul> -->
             </nav>
         </div>
     </header>
 
     <main>
         <div class="main-container">
-            <div class="image-container">
+            <div class="image-container hidden">
               <div class="container">
                 <img class="slide" src="/Images/apartment1.jpg" alt="">
                 <img class="slide" src="/Images/apartment2.jpg" alt="">
@@ -53,7 +51,7 @@
         
               </div>
             </div>
-            <div class="apart-details">
+            <div class="apart-details hidden">
               <h2 class="apartName">Lorem Ipsum</h2>
               <h3 class="apartPrice">$500 P/M</h3>
               <h3 class="apartLocation">Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
@@ -78,7 +76,7 @@
         </div>
         <div class="divider"></div>
 
-        <div class="description">
+        <div class="description hidden">
             <div class="apart-info">
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, blanditiis quibusdam voluptate porro a quia enim maxime animi ut facere odio consequuntur, nam optio repudiandae, quidem vel dolor asperiores dicta!<br><br>
@@ -91,7 +89,7 @@
             </div>
         </div>
 
-        <div class="perks-container">
+        <div class="perks-container hidden">
                 <div class="perks">
                     <div class="perk1">
                         <h3 class="perk1head">Apartment Surrounding</h3>
@@ -127,7 +125,7 @@
             </div>
             <div class="divider"></div>
 
-        <div class="card-slider-container">
+        <div class="card-slider-container hidden">
             <div class="wrapper">
                 <div class="title"><h2>Recommendation for you</h2>
                 <div class="slide-btns">
@@ -241,8 +239,7 @@
     </footer>
 
     <script src="../Js/app.js"></script>
-    <script src="../Js/menu.js"></script>
-    <!-- <script src="../Js/apartdetails.js"></script> -->
+    <script src="../Js/scrollanime.js"></script>
     <script>
     
     let slides = document.querySelectorAll(".slide");
