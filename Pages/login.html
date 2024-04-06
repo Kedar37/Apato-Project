@@ -1,53 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/test.css">
-  <title>Document</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/login.css">
+    <title>Apato Login</title>
 </head>
 <body>
-  <div class="container">
-    <div class="img">
-      <img src="/Images/promo-img.jpg" alt="">
-    </div>
-    <div class="login-form">
-      <div class="logo">
-        <img src="/Images/logo-png.png" alt="">
-      </div>
-      <div class="login">
-        <h2>Sign Up</h2>
-        <form action="">
-          <div class="field">
-            <label for="name">Full name</label>
-            <input type="text" name="name" id="name" required min="2">
-          </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" required>
-          </div>
-          <div class="field">
-            <label for="pass">Create Password</label>
-            <input type="password" required min="6">
-          </div>
-          <div class="field">
-            <label for="confirm-pass">Confirm Password</label>
-            <input type="password" required min="6">
-          </div>
-          <div class="submit-btn">
-            <button>Create account</button>
-          </div>
-        </form>
-        <div class="google">
-          <button>Login with Google</button>
+ <div class="wrapper">
+    <nav class="nav">
+        <div class="nav-logo">
+            <img src="../Images/logo-png.png" alt="" width="100px" height="100px" style="background-color: white; border-radius: 10px;">
         </div>
-      </div>
+    </nav>
+
+<!----------------------------- Form box ----------------------------------->    
+    <div class="form-box">
+        
+        <!------------------- login form -------------------------->
+
+        <div class="login-container" id="login">
+            <div class="top">
+                <header>Login</header>
+            </div>
+            <form action="/" id="loginform">
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Email" id="loginemail" required>
+                    <i class="bx bx-user"></i>
+                    <div class="error"></div>
+                </div>
+                <div class="input-box">
+                    <input type="password" class="input-field" placeholder="Password" id="loginpass" required>
+                    <i class="bx bx-lock-alt"></i>
+                    <div class="error"></div>
+                </div>
+                <div class="input-box">
+                    <input type="submit" class="submit" value="Sign In" id="loginbtn">
+                </div>
+            </form>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="login-check">
+                    <label for="login-check"> Remember Me</label>
+                </div>
+                <div class="two">
+                    <label><a href="#">Forgot password?</a></label>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem; color: white;">
+                <span>Don't have an account? <a href="#" onclick="register()" style="text-decoration: none; color: white;">Sign Up</a></span>
+            </div>
+        </div>
+
+        <!------------------- registration form -------------------------->
+        <div class="register-container" id="register">
+            <div class="top">
+                <header>Sign Up</header>
+            </div>
+            <form action="/" id="signup">
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Username" id="name" required>
+                    <i class="bx bx-user"></i>
+                    <div class="error"></div>
+                </div>
+                <div class="input-box">
+                    <input type="email" class="input-field" placeholder="Email" id="email" required>
+                    <i class="bx bx-envelope"></i>
+                    <div class="error"></div>
+                </div>
+                <div class="input-box">
+                    <input type="password" class="input-field" placeholder="Password" id="pass" required>
+                    <i class="bx bx-lock-alt"></i>
+                    <div class="error"></div>
+                </div>
+                <div class="input-box">
+                    <input type="password" class="input-field" placeholder="Confirm Password" id="confirmpass" required>
+                    <i class="bx bx-lock-alt"></i>
+                    <div class="error"></div>
+                </div>
+                <div class="input-box">
+                    <input type="submit" class="submit" value="Register">
+                </div>
+            </form>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="register-check">
+                    <label for="register-check"> Remember Me</label>
+                </div>
+                <div class="two">
+                    <label><a href="#">Terms & conditions</a></label>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem; color: white;">
+                <span>Have an account? <a href="#" onclick="login()" style="text-decoration: none; color: white;">Login</a></span>
+            </div>
+        </div>
     </div>
-  </div>
+</div>   
+
+<script src="../Js/signupvalid.js"></script>
+<script src="../Js/auth.js"></script>
+
+<script>
+
+    var a = document.getElementById("loginBtn");
+    var b = document.getElementById("registerBtn");
+    var x = document.getElementById("login");
+    var y = document.getElementById("register");
+
+    function login() {
+        x.style.left = "4px";
+        y.style.right = "-520px";
+        a.className += " white-btn";
+        b.className = "btn";
+        x.style.opacity = 1;
+        y.style.opacity = 0;
+    }
+
+    function register() {
+        x.style.left = "-510px";
+        y.style.right = "5px";
+        a.className = "btn";
+        b.className += " white-btn";
+        x.style.opacity = 0;
+        y.style.opacity = 1;
+    }
+
+</script>
+
 </body>
 </html>
