@@ -18,20 +18,19 @@
     <header>
         <div class="navbar">
             <nav>
-                <a href="#" class="logo"><img class="web-logo" src="Images/logo-png.png" alt=""></a>
-                <a href="#">For Owners</a>
-                <a href="#">For Buyers</a>
+                <a href="/Pages/home.html" class="logo"><img class="web-logo" src="/Images/logo-png.png" alt=""></a>
+                <a href="../Pages/Apart-save.html">Saved</a>
 
                 <div class="icons">
-                    <img src="Images/profilepic.jpg" class="profile" alt="">
+                    <img src="/Images/profilepic.jpg" class="profile" alt="">
                 </div>
-                <button class="menubtn" ><i class="fa-solid fa-bars fa-2xl"></i></button>
-                        <!-- <ul class="menulists">
-                            <li>Services</li>
+                <button class="menubtn" onclick="toggleMenu()"><i class="fa-solid fa-bars fa-2xl"></i></button>
+                        <ul class="menulists hidden">
+                            <li>Help</li>
                             <li>For Owners</li>
-                            <li>For Buyers</li>
-                            <li>Get Help</li>
-                        </ul> -->
+                            <li>Services</li>
+                            <li>Logout</li>
+                        </ul>
             </nav>
         </div>
     </header>
@@ -41,7 +40,78 @@
         <div class="direction">
             <button class="back-btn">Back</button>
             <h2 class="heading">Recommandation</h2>
-            <div></div>
+            <button class="menubtn" onclick="showFilter()"><i class="fa-solid fa-filter fa-2xl"></i></button>
+        </div>
+
+        <div class="filter-wrapper hidden">
+            <div class="filter-direction">
+                <div></div>
+                <h2 class="heading">Filter Search</h2>
+                <button class="back-btn" onclick="hideFilter()"><i class="fa-solid fa-xmark fa-2xl"></i></button>
+            </div>
+    
+            <div class="filter-comp hidden">
+                <div class="advance-search1">
+                    <div class="location-search">
+                        <button class="map-btn">Search</button>
+                    </div>
+                </div>
+    
+                <div class="advance-search2">
+                    <div class="price-range">
+                        <h4>Adjust budget</h4>
+                        <input type="range" id="price-range" name="price-range" min="5000" max="100000" value="10000" oninput="this.nextElementSibling.value = this.value">
+                        <output>10000</output>
+                        <div class="min-max">
+                            <div class="min-budget">
+                                <label for="min-budget">Min</label> <br>
+                                <input type="text" id="min-budget" name="min-budget" placeholder="" required minlength="3"> 
+                            </div>
+                            <div class="max-budget">
+                                <label for="max-budget">Max</label> <br>
+                                <input type="text" id="max-budget" name="max-budget" placeholder="" required minlength="3"> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search-by-city">
+                        <h4>Popular cities</h4>
+                        <div class="cities">
+                            <a href="" class="city1">Mumbai</a>
+                            <a href="" class="city1">Delhi</a>
+                            <a href="" class="city1">Chennai</a>
+                            <a href="" class="city1">Pune</a>
+                            <a href="" class="city1">Bangalore</a>
+                            <a href="" class="city1">Goa</a>
+                            <a href="" class="city1">Surat</a>
+                            <a href="" class="city1">Manali</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="advance-search3">
+                    <div class="apartment-type">
+                        <h4 class="room-type-heading">Apartment type</h4>
+                        <div class="room-btns" id="option-container">
+                            <button class="btn1 room-btn" onclick="toggleSelection(this)">1RK</button>
+                            <button class="btn2 room-btn" onclick="toggleSelection(this)">2RK</button>
+                            <button class="btn3 room-btn" onclick="toggleSelection(this)">1BHK</button>
+                            <button class="btn4 room-btn" onclick="toggleSelection(this)">2BHK</button>
+                            <button class="btn5 room-btn" onclick="toggleSelection(this)">3BHK</button>
+                            <button class="btn6 room-btn" onclick="toggleSelection(this)">4BHK</button>
+                        </div>
+                    </div>
+                        <div class="ratings">
+                            <h4>Ratings</h4>
+                            <fieldset id="rating">
+                                <input type="radio" id="rate" value="5star" name="rating">  5 Star <br>
+                                <input type="radio" id="rate" value="4star" name="rating">  4 Star <br>
+                                <input type="radio" id="rate" value="3star" name="rating">  3 Star <br>
+                            </fieldset>
+                        </div>
+                </div>
+            </div>
+    
+            <button class="filter-search-btn">Search</button>
         </div>
 
         <div class="apartment-comp">
@@ -56,18 +126,18 @@
                     </div>
                     <div class="save-card-address"><p>Location</p></div>
                     <div class="serviceIcons">
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-solid fa-bath fa-xl"></i>
+                        <i class="fa-solid fa-wifi fa-xl"></i>
+                        <i class="fa-solid fa-car-side fa-xl"></i>
+                        <i class="fa-solid fa-bolt fa-xl"></i>
+                        <i class="fa-solid fa-tv fa-xl"></i>
+                        <i class="fa-solid fa-kitchen-set fa-xl"></i>
+                        <i class="fa-solid fa-faucet-drip fa-xl"></i>
+                        <i class="fa-solid fa-bed fa-xl"></i>
                     </div>
                     <div class="save-card-btns">
-                        <button class="save-book-btn">Book Now</button>
-                        <button class="remove-btn">Save For Later</button>
+                        <button class="save-book-btn"><a href="../Pages/Apart-details.html" style="text-decoration: none; color: white;">Book Now</a></button>
+                        <button class="save-btn">Save For Later</button>
                     </div>
                 </div>
             </div>
@@ -82,18 +152,18 @@
                     </div>
                     <div class="save-card-address"><p>Location</p></div>
                     <div class="serviceIcons">
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-solid fa-bath fa-xl"></i>
+                        <i class="fa-solid fa-wifi fa-xl"></i>
+                        <i class="fa-solid fa-car-side fa-xl"></i>
+                        <i class="fa-solid fa-bolt fa-xl"></i>
+                        <i class="fa-solid fa-tv fa-xl"></i>
+                        <i class="fa-solid fa-kitchen-set fa-xl"></i>
+                        <i class="fa-solid fa-faucet-drip fa-xl"></i>
+                        <i class="fa-solid fa-bed fa-xl"></i>
                     </div>
                     <div class="save-card-btns">
-                        <button class="save-book-btn">Book Now</button>
-                        <button class="remove-btn">Save For Later</button>
+                        <button class="save-book-btn"><a href="../Pages/Apart-details.html" style="text-decoration: none; color: white;">Book Now</a></button>
+                        <button class="save-btn">Save For Later</button>
                     </div>
                 </div>
             </div>
@@ -108,18 +178,18 @@
                     </div>
                     <div class="save-card-address"><p>Location</p></div>
                     <div class="serviceIcons">
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-solid fa-bath fa-xl"></i>
+                        <i class="fa-solid fa-wifi fa-xl"></i>
+                        <i class="fa-solid fa-car-side fa-xl"></i>
+                        <i class="fa-solid fa-bolt fa-xl"></i>
+                        <i class="fa-solid fa-tv fa-xl"></i>
+                        <i class="fa-solid fa-kitchen-set fa-xl"></i>
+                        <i class="fa-solid fa-faucet-drip fa-xl"></i>
+                        <i class="fa-solid fa-bed fa-xl"></i>
                     </div>
                     <div class="save-card-btns">
-                        <button class="save-book-btn">Book Now</button>
-                        <button class="remove-btn">Save For Later</button>
+                        <button class="save-book-btn"><a href="../Pages/Apart-details.html" style="text-decoration: none; color: white;">Book Now</a></button>
+                        <button class="save-btn">Save For Later</button>
                     </div>
                 </div>
             </div>
@@ -134,18 +204,18 @@
                     </div>
                     <div class="save-card-address"><p>Location</p></div>
                     <div class="serviceIcons">
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-solid fa-bath fa-xl"></i>
+                        <i class="fa-solid fa-wifi fa-xl"></i>
+                        <i class="fa-solid fa-car-side fa-xl"></i>
+                        <i class="fa-solid fa-bolt fa-xl"></i>
+                        <i class="fa-solid fa-tv fa-xl"></i>
+                        <i class="fa-solid fa-kitchen-set fa-xl"></i>
+                        <i class="fa-solid fa-faucet-drip fa-xl"></i>
+                        <i class="fa-solid fa-bed fa-xl"></i>
                     </div>
                     <div class="save-card-btns">
-                        <button class="save-book-btn">Book Now</button>
-                        <button class="remove-btn">Save For Later</button>
+                        <button class="save-book-btn"><a href="../Pages/Apart-details.html" style="text-decoration: none; color: white;">Book Now</a></button>
+                        <button class="save-btn">Save For Later</button>
                     </div>
                 </div>
             </div>
@@ -160,18 +230,18 @@
                     </div>
                     <div class="save-card-address"><p>Location</p></div>
                     <div class="serviceIcons">
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-solid fa-bath fa-xl"></i>
+                        <i class="fa-solid fa-wifi fa-xl"></i>
+                        <i class="fa-solid fa-car-side fa-xl"></i>
+                        <i class="fa-solid fa-bolt fa-xl"></i>
+                        <i class="fa-solid fa-tv fa-xl"></i>
+                        <i class="fa-solid fa-kitchen-set fa-xl"></i>
+                        <i class="fa-solid fa-faucet-drip fa-xl"></i>
+                        <i class="fa-solid fa-bed fa-xl"></i>
                     </div>
                     <div class="save-card-btns">
-                        <button class="save-book-btn">Book Now</button>
-                        <button class="remove-btn">Save For Later</button>
+                        <button class="save-book-btn"><a href="../Pages/Apart-details.html" style="text-decoration: none; color: white;">Book Now</a></button>
+                        <button class="save-btn">Save For Later</button>
                     </div>
                 </div>
             </div>
@@ -186,23 +256,153 @@
                     </div>
                     <div class="save-card-address"><p>Location</p></div>
                     <div class="serviceIcons">
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
-                        <i class="fa-regular fa-building fa-2xl"></i>
+                        <i class="fa-solid fa-bath fa-xl"></i>
+                        <i class="fa-solid fa-wifi fa-xl"></i>
+                        <i class="fa-solid fa-car-side fa-xl"></i>
+                        <i class="fa-solid fa-bolt fa-xl"></i>
+                        <i class="fa-solid fa-tv fa-xl"></i>
+                        <i class="fa-solid fa-kitchen-set fa-xl"></i>
+                        <i class="fa-solid fa-faucet-drip fa-xl"></i>
+                        <i class="fa-solid fa-bed fa-xl"></i>
                     </div>
                     <div class="save-card-btns">
-                        <button class="save-book-btn">Check Now</button>
-                        <button class="remove-btn">Save For Later</button>
+                        <button class="save-book-btn"><a href="../Pages/Apart-details.html" style="text-decoration: none; color: white;">Book Now</a></button>
+                        <button class="save-btn">Save For Later</button>
+                    </div>
+                </div>
+            </div>
+            <div class="save-card hidden">
+                <div class="save-card-img">
+                    <img src="/Images/apartment1.jpg" alt="img" draggable="false">
+                </div>
+                <div class="save-card-content">
+                    <div class="save-card-details">
+                        <h3>Blanche Pearson</h3>
+                        <h3>$500 P/M</h3>
+                    </div>
+                    <div class="save-card-address"><p>Location</p></div>
+                    <div class="serviceIcons">
+                        <i class="fa-solid fa-bath fa-xl"></i>
+                        <i class="fa-solid fa-wifi fa-xl"></i>
+                        <i class="fa-solid fa-car-side fa-xl"></i>
+                        <i class="fa-solid fa-bolt fa-xl"></i>
+                        <i class="fa-solid fa-tv fa-xl"></i>
+                        <i class="fa-solid fa-kitchen-set fa-xl"></i>
+                        <i class="fa-solid fa-faucet-drip fa-xl"></i>
+                        <i class="fa-solid fa-bed fa-xl"></i>
+                    </div>
+                    <div class="save-card-btns">
+                        <button class="save-book-btn"><a href="../Pages/Apart-details.html" style="text-decoration: none; color: white;">Book Now</a></button>
+                        <button class="save-btn">Save For Later</button>
+                    </div>
+                </div>
+            </div>
+            <div class="save-card hidden">
+                <div class="save-card-img">
+                    <img src="/Images/apartment1.jpg" alt="img" draggable="false">
+                </div>
+                <div class="save-card-content">
+                    <div class="save-card-details">
+                        <h3>Blanche Pearson</h3>
+                        <h3>$500 P/M</h3>
+                    </div>
+                    <div class="save-card-address"><p>Location</p></div>
+                    <div class="serviceIcons">
+                        <i class="fa-solid fa-bath fa-xl"></i>
+                        <i class="fa-solid fa-wifi fa-xl"></i>
+                        <i class="fa-solid fa-car-side fa-xl"></i>
+                        <i class="fa-solid fa-bolt fa-xl"></i>
+                        <i class="fa-solid fa-tv fa-xl"></i>
+                        <i class="fa-solid fa-kitchen-set fa-xl"></i>
+                        <i class="fa-solid fa-faucet-drip fa-xl"></i>
+                        <i class="fa-solid fa-bed fa-xl"></i>
+                    </div>
+                    <div class="save-card-btns">
+                        <button class="save-book-btn"><a href="../Pages/Apart-details.html" style="text-decoration: none; color: white;">Book Now</a></button>
+                        <button class="save-btn">Save For Later</button>
+                    </div>
+                </div>
+            </div>
+            <div class="save-card hidden">
+                <div class="save-card-img">
+                    <img src="/Images/apartment1.jpg" alt="img" draggable="false">
+                </div>
+                <div class="save-card-content">
+                    <div class="save-card-details">
+                        <h3>Blanche Pearson</h3>
+                        <h3>$500 P/M</h3>
+                    </div>
+                    <div class="save-card-address"><p>Location</p></div>
+                    <div class="serviceIcons">
+                        <i class="fa-solid fa-bath fa-xl"></i>
+                        <i class="fa-solid fa-wifi fa-xl"></i>
+                        <i class="fa-solid fa-car-side fa-xl"></i>
+                        <i class="fa-solid fa-bolt fa-xl"></i>
+                        <i class="fa-solid fa-tv fa-xl"></i>
+                        <i class="fa-solid fa-kitchen-set fa-xl"></i>
+                        <i class="fa-solid fa-faucet-drip fa-xl"></i>
+                        <i class="fa-solid fa-bed fa-xl"></i>
+                    </div>
+                    <div class="save-card-btns">
+                        <button class="save-book-btn"><a href="../Pages/Apart-details.html" style="text-decoration: none; color: white;">Book Now</a></button>
+                        <button class="save-btn">Save For Later</button>
+                    </div>
+                </div>
+            </div>
+            <div class="save-card hidden">
+                <div class="save-card-img">
+                    <img src="/Images/apartment1.jpg" alt="img" draggable="false">
+                </div>
+                <div class="save-card-content">
+                    <div class="save-card-details">
+                        <h3>Blanche Pearson</h3>
+                        <h3>$500 P/M</h3>
+                    </div>
+                    <div class="save-card-address"><p>Location</p></div>
+                    <div class="serviceIcons">
+                        <i class="fa-solid fa-bath fa-xl"></i>
+                        <i class="fa-solid fa-wifi fa-xl"></i>
+                        <i class="fa-solid fa-car-side fa-xl"></i>
+                        <i class="fa-solid fa-bolt fa-xl"></i>
+                        <i class="fa-solid fa-tv fa-xl"></i>
+                        <i class="fa-solid fa-kitchen-set fa-xl"></i>
+                        <i class="fa-solid fa-faucet-drip fa-xl"></i>
+                        <i class="fa-solid fa-bed fa-xl"></i>
+                    </div>
+                    <div class="save-card-btns">
+                        <button class="save-book-btn"><a href="../Pages/Apart-details.html" style="text-decoration: none; color: white;">Book Now</a></button>
+                        <button class="save-btn">Save For Later</button>
+                    </div>
+                </div>
+            </div>
+            <div class="save-card hidden">
+                <div class="save-card-img">
+                    <img src="/Images/apartment1.jpg" alt="img" draggable="false">
+                </div>
+                <div class="save-card-content">
+                    <div class="save-card-details">
+                        <h3>Blanche Pearson</h3>
+                        <h3>$500 P/M</h3>
+                    </div>
+                    <div class="save-card-address"><p>Location</p></div>
+                    <div class="serviceIcons">
+                        <i class="fa-solid fa-bath fa-xl"></i>
+                        <i class="fa-solid fa-wifi fa-xl"></i>
+                        <i class="fa-solid fa-car-side fa-xl"></i>
+                        <i class="fa-solid fa-bolt fa-xl"></i>
+                        <i class="fa-solid fa-tv fa-xl"></i>
+                        <i class="fa-solid fa-kitchen-set fa-xl"></i>
+                        <i class="fa-solid fa-faucet-drip fa-xl"></i>
+                        <i class="fa-solid fa-bed fa-xl"></i>
+                    </div>
+                    <div class="save-card-btns">
+                        <button class="save-book-btn"><a href="../Pages/Apart-details.html" style="text-decoration: none; color: white;">Book Now</a></button>
+                        <button class="save-btn">Save For Later</button>
                     </div>
                 </div>
             </div>
             <div class="view-more">
-                <button>View More</button>
+                <button id="view-more">View More</button>
             </div>
         </div>
     </main>
@@ -236,70 +436,143 @@
             </div>
         </div>
     </footer>
-
     
     <script>
-        function toggleSelection(button) {
-          button.classList.toggle('selected');
-        }
-      
-        // You can also retrieve the selected options programmatically
-        function getSelectedOptions() {
-          const selectedButtons = document.querySelectorAll('.button.selected');
-          const selectedOptions = Array.from(selectedButtons).map(button => button.textContent);
-          console.log('Selected options:', selectedOptions);
-        }
+    document.addEventListener('DOMContentLoaded', function() {
+    const saveButtons = document.querySelectorAll('.save-btn');
 
-        //checkbox function
-        const selectedOptions = new Set();
+    saveButtons.forEach(button => {
+        button.addEventListener('click', function(event) {
+            const saveCard = event.target.closest('.save-card');
+            button.textContent = "Saved";
+            
+            if (saveCard) {
+                // Extract relevant information from the save-card
+                const productName = saveCard.querySelector('h3').textContent;
+                const productPrice = saveCard.querySelector('.save-card-details h3:nth-child(2)').textContent;
+                const productLocation = saveCard.querySelector('.save-card-address p').textContent;
 
-        function toggleSelection(checkBox) {
-        const value = checkBox.value;
+                // Create an object to represent the saved product
+                const savedItem = {
+                    id: generateUniqueId(), // You can implement this function to generate a unique ID
+                    name: productName,
+                    price: productPrice,
+                    location: productLocation
+                };
 
-        if (checkBox.checked) {
-        selectedOptions.add(value);
-        } else {
-        selectedOptions.delete(value);
-        }
+                // Retrieve existing saved items from localStorage or initialize an empty array
+                const savedItems = JSON.parse(localStorage.getItem('savedItems')) || [];
 
-        console.log('Selected options:', Array.from(selectedOptions));
-        }
+                // Add the new saved item to the array
+                savedItems.push(savedItem);
 
+                // Update localStorage with the updated list of saved items
+                localStorage.setItem('savedItems', JSON.stringify(savedItems));
 
-        // view more function
+                // Optionally, display an alert or provide feedback to the user
 
-        document.addEventListener("DOMContentLoaded", function () {
-  // Number of initially visible product cards
-  const initialCards = 4;
+            }
+        });
+    });
 
-  // Reference to the product container
-  const productContainer = document.getElementById("cardContainer");
-
-  // Reference to the "View More" button
-  const viewMoreButton = document.getElementById("viewMore");
-
-  // Function to show more product cards
-  function showMoreCards() {
-    // Get all product cards
-    const allProductCards = document.querySelectorAll(".apartment");
-
-    // Determine the next set of cards to show
-    const nextCards = Array.from(allProductCards).slice(allProductCards.length, allProductCards.length + initialCards);
-
-    // Append the next set of cards to the container
-    nextCards.forEach(card => productContainer.appendChild(card));
-
-    // Check if there are no more cards to show, and hide the button
-    if (nextCards.length === 0) {
-      viewMoreButton.style.display = "none";
+    // Function to generate a unique ID (you can use UUID or any other method)
+    function generateUniqueId() {
+        return Math.random().toString(36).substr(2, 9);
     }
-  }
-
-  // Attach click event listener to the "View More" button
-  viewMoreButton.addEventListener("click", showMoreCards);
 });
-      </script>
-    <script src="../Js/menu.js"></script>
+
+    </script>
+
+    <script>
+        // Function to show additional product cards
+function showMoreCards() {
+    // Select all hidden product cards
+    const hiddenCards = document.querySelectorAll('.save-card.hidden');
+    
+    // Loop through the hidden cards and display them
+    hiddenCards.forEach(card => {
+        card.style.display = 'block'; // Show the card
+        card.classList.remove('hidden'); // Remove the 'hidden' class
+    });
+    
+    // Hide the 'View More' button if all cards are visible
+    if (hiddenCards.length === 0) {
+        document.getElementById('view-more').style.display = 'none';
+    }
+}
+
+// Event listener for the 'View More' button
+document.getElementById('view-more').addEventListener('click', showMoreCards);
+
+// Execute the following code after the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Add event listener to the 'View More' button
+    document.getElementById('view-more').addEventListener('click', showMoreCards);
+});
+    </script>
+
+<script>
+    function showFilter() {
+        // Select the first hidden filter-wrapper element (assuming there's only one)
+        const filter = document.querySelector(".filter-wrapper.hidden");
+        if (filter) {
+            filter.style.display = 'block'; // Display the filter
+            filter.classList.remove('hidden'); // Remove the 'hidden' class
+        }
+    }
+
+    function hideFilter() {
+        // Select the first visible filter-wrapper element (assuming there's only one)
+        const filter = document.querySelector(".filter-wrapper:not(.hidden)");
+        if (filter) {
+            filter.style.display = 'none'; // Hide the filter
+            filter.classList.add('hidden'); // Add the 'hidden' class
+        }
+    }
+</script>
+
+<script>
+    function showMenu() {
+        // Select the first hidden filter-wrapper element (assuming there's only one)
+        const menu = document.querySelector(".menulists.hidden");
+        if (menu) {
+            menu.style.display = 'block'; // Display the filter
+            menu.classList.remove('hidden'); // Remove the 'hidden' class
+        }
+    }
+
+    function hideMenu() {
+        // Select the first visible filter-wrapper element (assuming there's only one)
+        const menu = document.querySelector(".menulists:not(.hidden)");
+        if (menu) {
+            menu.style.display = 'none'; // Hide the filter
+            menu.classList.add('hidden'); // Add the 'hidden' class
+        }
+    }
+
+    function toggleMenu() {
+        const menu = document.querySelector(".menulists");
+        if (menu.classList.contains('hidden')) {
+            showMenu(); // Show the filter if it's hidden
+        } else {
+            hideMenu(); // Hide the filter if it's visible
+        }
+    }
+</script>
+
+<script>
+    function toggleSelection(button) {
+      button.classList.toggle('selected');
+    }
+  
+    // You can also retrieve the selected options programmatically
+    function getSelectedOptions() {
+      const selectedButtons = document.querySelectorAll('.button.selected');
+      const selectedOptions = Array.from(selectedButtons).map(button => button.textContent);
+      console.log('Selected options:', selectedOptions);
+    }
+  </script>
+
     <script src="../Js/btn.js"></script>
     <script src="../Js/smallimgslider.js"></script>
 </body>

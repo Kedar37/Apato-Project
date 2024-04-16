@@ -18,20 +18,19 @@
     <header>
         <div class="navbar">
             <nav>
-                <a href="#" class="logo"><img class="web-logo" src="Images/logo-png.png" alt=""></a>
-                <a href="#">For Owners</a>
-                <a href="#">For Buyers</a>
+                <a href="/Pages/home.html" class="logo"><img class="web-logo" src="/Images/logo-png.png" alt=""></a>
+                <a href="./Apart-save.html">Saved</a>
 
                 <div class="icons">
-                    <img src="Images/profilepic.jpg" class="profile" alt="">
+                    <img src="/Images/profilepic.jpg" class="profile" alt="">
                 </div>
-                <button class="menubtn" ><i class="fa-solid fa-bars fa-2xl"></i></button>
-                        <!-- <ul class="menulists">
-                            <li>Services</li>
+                <button class="menubtn" onclick="toggleMenu()"><i class="fa-solid fa-bars fa-2xl"></i></button>
+                        <ul class="menulists hidden">
+                            <li>Help</li>
                             <li>For Owners</li>
-                            <li>For Buyers</li>
-                            <li>Get Help</li>
-                        </ul> -->
+                            <li>Services</li>
+                            <li id="logout">Logout</li>
+                        </ul>
             </nav>
         </div>
     </header>
@@ -58,18 +57,18 @@
               <div class="services">
                   <h3>Services</h3>
                   <div class="serviceIcons">
-                      <i class="fa-regular fa-building fa-2xl"></i>
-                      <i class="fa-regular fa-building fa-2xl"></i>
-                      <i class="fa-regular fa-building fa-2xl"></i>
-                      <i class="fa-regular fa-building fa-2xl"></i>
-                      <i class="fa-regular fa-building fa-2xl"></i>
-                      <i class="fa-regular fa-building fa-2xl"></i>
-                      <i class="fa-regular fa-building fa-2xl"></i>
-                      <i class="fa-regular fa-building fa-2xl"></i>
-                  </div>
+                    <i class="fa-solid fa-bath fa-xl"></i>
+                    <i class="fa-solid fa-wifi fa-xl"></i>
+                    <i class="fa-solid fa-car-side fa-xl"></i>
+                    <i class="fa-solid fa-bolt fa-xl"></i>
+                    <i class="fa-solid fa-tv fa-xl"></i>
+                    <i class="fa-solid fa-kitchen-set fa-xl"></i>
+                    <i class="fa-solid fa-faucet-drip fa-xl"></i>
+                    <i class="fa-solid fa-bed fa-xl"></i>
+                </div>
               </div>
               <div class="bookBtns">
-                  <button class="book-btn">Book Now</button>
+                  <button class="book-btn"><a href="../Pages/booking.html" style="text-decoration: none; color: white;">Book Now</a></button>
                   <button class="save-btn">Save For Later</button>
               </div>
           </div>
@@ -240,6 +239,35 @@
 
     <script src="../Js/app.js"></script>
     <script src="../Js/scrollanime.js"></script>
+    <script>
+        function showMenu() {
+            // Select the first hidden filter-wrapper element (assuming there's only one)
+            const menu = document.querySelector(".menulists.hidden");
+            if (menu) {
+                menu.style.display = 'block'; // Display the filter
+                menu.classList.remove('hidden'); // Remove the 'hidden' class
+            }
+        }
+    
+        function hideMenu() {
+            // Select the first visible filter-wrapper element (assuming there's only one)
+            const menu = document.querySelector(".menulists:not(.hidden)");
+            if (menu) {
+                menu.style.display = 'none'; // Hide the filter
+                menu.classList.add('hidden'); // Add the 'hidden' class
+            }
+        }
+    
+        function toggleMenu() {
+            const menu = document.querySelector(".menulists");
+            if (menu.classList.contains('hidden')) {
+                showMenu(); // Show the filter if it's hidden
+            } else {
+                hideMenu(); // Hide the filter if it's visible
+            }
+        }
+    </script>
+
     <script>
     
     let slides = document.querySelectorAll(".slide");

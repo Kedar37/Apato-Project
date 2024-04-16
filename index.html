@@ -18,19 +18,18 @@
         <div class="navbar">
             <nav>
                 <a href="#" class="logo"><img class="web-logo" src="Images/logo-png.png" alt=""></a>
-                <a href="#">For Owners</a>
-                <a href="#">For Buyers</a>
+                <a href="./Pages/Apart-save.html">Saved</a>
 
                 <div class="icons">
                     <img src="Images/profilepic.jpg" class="profile" alt="">
                 </div>
-                <button class="menubtn" ><i class="fa-solid fa-bars fa-2xl"></i></button>
-                        <!-- <ul class="menulists">
-                            <li>Services</li>
+                <button class="menubtn" onclick="toggleMenu()"><i class="fa-solid fa-bars fa-2xl"></i></button>
+                        <ul class="menulists">
+                            <li>Help</li>
                             <li>For Owners</li>
-                            <li>For Buyers</li>
-                            <li>Get Help</li>
-                        </ul> -->
+                            <li>Services</li>
+                            <li id="logout">Logout</li>
+                        </ul>
             </nav>
         </div>
     </header>
@@ -122,87 +121,87 @@
             </div>
         </div>
 
-    <div class="card-slider-container hidden">
-    <div class="wrapper">
-        <div class="title"><h2>Recommendation for you</h2>
-        <div class="slide-btns">
-        <i id="left" class="fa-solid fa-angle-left"></i>
-        <i id="right" class="fa-solid fa-angle-right"></i>
-        </div>
-        </div>
-        <ul class="carousel">
-          <li class="card">
-            <div class="img"><img src="Images/apartment1.jpg" alt="img" draggable="false"></div>
-            <div class="card-content">
-                <div class="details">
-                    <h3>Blanche Pearson</h3>
-                    <h3>$500 P/M</h3>
+        <div class="card-slider-container hidden">
+            <div class="wrapper">
+                <div class="title"><h2>Recommendation for you</h2>
+                <div class="slide-btns">
+                <i id="left" class="fa-solid fa-angle-left"></i>
+                <i id="right" class="fa-solid fa-angle-right"></i>
                 </div>
-                <div class="address"><p>Location</p></div>
-                <div class="card-btn"><button class="check-btn"><a href="/Pages/rec-page.html" style="text-decoration: none; color: white;"><a href="/Pages/rec-page.html" style="text-decoration: none; color: white;">Check Now</a></a></button></div>
-            </div>
-          </li>
-          <li class="card">
-            <div class="img"><img src="Images/apartment1.jpg" alt="img" draggable="false"></div>
-            <div class="card-content">
-                <div class="details">
-                    <h3>Blanche Pearson</h3>
-                    <h3>$500 P/M</h3>
                 </div>
-                <div class="address"><p>Location</p></div>
-                <div class="card-btn"><button class="check-btn"><a href="/Pages/rec-page.html" style="text-decoration: none; color: white;">Check Now</a></button></div>
-            </div>
-          </li>
-          <li class="card">
-            <div class="img"><img src="Images/apartment1.jpg" alt="img" draggable="false"></div>
-            <div class="card-content">
-                <div class="details">
-                    <h3>Blanche Pearson</h3>
-                    <h3>$500 P/M</h3>
+                <ul class="carousel">
+                  <li class="card">
+                    <div class="img"><img src="/Images/apartment1.jpg" alt="img" draggable="false"></div>
+                    <div class="card-content">
+                        <div class="details">
+                            <h3>Blanche Pearson</h3>
+                            <h3>$500 P/M</h3>
+                        </div>
+                        <div class="address"><p>Location</p></div>
+                        <div class="card-btn"><button class="check-btn">Check Now</button></div>
+                    </div>
+                  </li>
+                  <li class="card">
+                    <div class="img"><img src="/Images/apartment1.jpg" alt="img" draggable="false"></div>
+                    <div class="card-content">
+                        <div class="details">
+                            <h3>Blanche Pearson</h3>
+                            <h3>$500 P/M</h3>
+                        </div>
+                        <div class="address"><p>Location</p></div>
+                        <div class="card-btn"><button class="check-btn">Check Now</button></div>
+                    </div>
+                  </li>
+                  <li class="card">
+                    <div class="img"><img src="/Images/apartment1.jpg" alt="img" draggable="false"></div>
+                    <div class="card-content">
+                        <div class="details">
+                            <h3>Blanche Pearson</h3>
+                            <h3>$500 P/M</h3>
+                        </div>
+                        <div class="address"><p>Location</p></div>
+                        <div class="card-btn"><button class="check-btn">Check Now</button></div>
+                    </div>
+                  </li>
+                  <li class="card">
+                    <div class="img"><img src="/Images/apartment1.jpg" alt="img" draggable="false"></div>
+                    <div class="card-content">
+                        <div class="details">
+                            <h3>Blanche Pearson</h3>
+                            <h3>$500 P/M</h3>
+                        </div>
+                        <div class="address"><p>Location</p></div>
+                        <div class="card-btn"><button class="check-btn">Check Now</button></div>
+                    </div>
+                  </li>
+                  <li class="card">
+                    <div class="img"><img src="/Images/apartment1.jpg" alt="img" draggable="false"></div>
+                    <div class="card-content">
+                        <div class="details">
+                            <h3>Blanche Pearson</h3>
+                            <h3>$500 P/M</h3>
+                        </div>
+                        <div class="address"><p>Location</p></div>
+                        <div class="card-btn"><button class="check-btn">Check Now</button></div>
+                    </div>
+                  </li>
+                  <li class="card">
+                    <div class="img"><img src="/Images/apartment1.jpg" alt="img" draggable="false"></div>
+                    <div class="card-content">
+                        <div class="details">
+                            <h3>Blanche Pearson</h3>
+                            <h3>$500 P/M</h3>
+                        </div>
+                        <div class="address"><p>Location</p></div>
+                        <div class="card-btn"><button class="check-btn">Check Now</button></div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="view-btn">
+                    <button class="view-more-btn"><a href="/Pages/rec-page.html" style="text-decoration: none; color: gray;">View more</a></button>
                 </div>
-                <div class="address"><p>Location</p></div>
-                <div class="card-btn"><button class="check-btn"><a href="/Pages/rec-page.html" style="text-decoration: none; color: white;">Check Now</a></button></div>
+              </div>
             </div>
-          </li>
-          <li class="card">
-            <div class="img"><img src="Images/apartment1.jpg" alt="img" draggable="false"></div>
-            <div class="card-content">
-                <div class="details">
-                    <h3>Blanche Pearson</h3>
-                    <h3>$500 P/M</h3>
-                </div>
-                <div class="address"><p>Location</p></div>
-                <div class="card-btn"><button class="check-btn"><a href="/Pages/rec-page.html" style="text-decoration: none; color: white;">Check Now</a></button></div>
-            </div>
-          </li>
-          <li class="card">
-            <div class="img"><img src="Images/apartment1.jpg" alt="img" draggable="false"></div>
-            <div class="card-content">
-                <div class="details">
-                    <h3>Blanche Pearson</h3>
-                    <h3>$500 P/M</h3>
-                </div>
-                <div class="address"><p>Location</p></div>
-                <div class="card-btn"><button class="check-btn"><a href="/Pages/rec-page.html" style="text-decoration: none; color: white;">Check Now</a></button></div>
-            </div>
-          </li>
-          <li class="card">
-            <div class="img"><img src="Images/apartment1.jpg" alt="img" draggable="false"></div>
-            <div class="card-content">
-                <div class="details">
-                    <h3>Blanche Pearson</h3>
-                    <h3>$500 P/M</h3>
-                </div>
-                <div class="address"><p>Location</p></div>
-                <div class="card-btn"><button class="check-btn"><a href="/Pages/rec-page.html" style="text-decoration: none; color: white;">Check Now</a></button></div>
-            </div>
-          </li>
-        </ul>
-        <div class="view-btn">
-            <button class="view-more-btn">View more</button>
-        </div>
-      </div>
-    </div>
 
     <div class="tips-container">
         <div class="tip-content">
@@ -253,9 +252,36 @@
     </div>
 </footer>
 
-<script src="Js/slider.js"></script>
-<script src="Js/app.js"></script>
-<script src="Js/scrollanime.js"></script>
+<script src="/Js/app.js"></script>
+<script src="/Js/scrollanime.js"></script>
+<script>
+    function showMenu() {
+        // Select the first hidden filter-wrapper element (assuming there's only one)
+        const menu = document.querySelector(".menulists.hidden");
+        if (menu) {
+            menu.style.display = 'block'; // Display the filter
+            menu.classList.remove('hidden'); // Remove the 'hidden' class
+        }
+    }
+
+    function hideMenu() {
+        // Select the first visible filter-wrapper element (assuming there's only one)
+        const menu = document.querySelector(".menulists:not(.hidden)");
+        if (menu) {
+            menu.style.display = 'none'; // Hide the filter
+            menu.classList.add('hidden'); // Add the 'hidden' class
+        }
+    }
+
+    function toggleMenu() {
+        const menu = document.querySelector(".menulists");
+        if (menu.classList.contains('hidden')) {
+            showMenu(); // Show the filter if it's hidden
+        } else {
+            hideMenu(); // Hide the filter if it's visible
+        }
+    }
+</script>
 
 </body>
 </html>

@@ -1,12 +1,16 @@
-/* POPPINS FONT */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
 
-*{  
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Quicksand", sans-serif;
+    outline: none;
+    border: none;
+    letter-spacing: 1.2px;
+    scroll-behavior: smooth;
 }
+
 body{
     background: url("/Images/promo-img.jpg");
     background-size: cover;
@@ -98,7 +102,6 @@ header{
     width: 100%;
     padding: 0 10px 0 45px;
     border: none;
-    border-radius: 10px;
     outline: none;
     transition: .2s ease;
 }
@@ -121,7 +124,6 @@ header{
     height: 45px;
     width: 100%;
     border: none;
-    border-radius: 10px;
     outline: none;
     background: rgba(255, 255, 255, 0.7);
     cursor: pointer;

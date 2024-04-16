@@ -16,20 +16,19 @@
     <header>
         <div class="navbar">
             <nav>
-                <a href="#" class="logo"><img class="web-logo" src="Images/logo-png.png" alt=""></a>
-                <a href="#">For Owners</a>
-                <a href="#">For Buyers</a>
+                <a href="/Pages/home.html" class="logo"><img class="web-logo" src="/Images/logo-png.png" alt=""></a>
+                <a href="./Pages/Apart-save.html">Saved</a>
 
                 <div class="icons">
-                    <img src="Images/profilepic.jpg" class="profile" alt="">
+                    <img src="/Images/profilepic.jpg" class="profile" alt="">
                 </div>
-                <button class="menubtn" ><i class="fa-solid fa-bars fa-2xl"></i></button>
-                        <!-- <ul class="menulists">
-                            <li>Services</li>
+                <button class="menubtn" onclick="toggleMenu()"><i class="fa-solid fa-bars fa-2xl"></i></button>
+                        <ul class="menulists hidden">
+                            <li>Help</li>
                             <li>For Owners</li>
-                            <li>For Buyers</li>
-                            <li>Get Help</li>
-                        </ul> -->
+                            <li>Services</li>
+                            <li id="logout">Logout</li>
+                        </ul>
             </nav>
         </div>
     </header>
@@ -228,5 +227,100 @@
 
     <script src="../Js/app.js"></script>
     <script src="../Js/scrollanime.js"></script>
+    <script>
+        function showMenu() {
+            // Select the first hidden filter-wrapper element (assuming there's only one)
+            const menu = document.querySelector(".menulists.hidden");
+            if (menu) {
+                menu.style.display = 'block'; // Display the filter
+                menu.classList.remove('hidden'); // Remove the 'hidden' class
+            }
+        }
+    
+        function hideMenu() {
+            // Select the first visible filter-wrapper element (assuming there's only one)
+            const menu = document.querySelector(".menulists:not(.hidden)");
+            if (menu) {
+                menu.style.display = 'none'; // Hide the filter
+                menu.classList.add('hidden'); // Add the 'hidden' class
+            }
+        }
+    
+        function toggleMenu() {
+            const menu = document.querySelector(".menulists");
+            if (menu.classList.contains('hidden')) {
+                showMenu(); // Show the filter if it's hidden
+            } else {
+                hideMenu(); // Hide the filter if it's visible
+            }
+        }
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // Function to render saved products from localStorage
+    function renderSavedProducts() {
+        const savedItems = JSON.parse(localStorage.getItem('savedItems')) || [];
+        const container = document.querySelector('.apartment-comp');
+
+        // Clear existing content in the container
+        container.innerHTML = '';
+
+        // Render each saved item as a save-card
+        savedItems.forEach(item => {
+            const saveCard = createSaveCardElement(item);
+            container.appendChild(saveCard);
+        });
+    }
+
+    // Helper function to create a save-card element
+    function createSaveCardElement(item) {
+        const saveCard = document.createElement('div');
+        saveCard.classList.add('save-card');
+        saveCard.dataset.itemId = item.id; // Set a unique identifier for the item
+
+        // Construct the HTML content of the save-card
+        saveCard.innerHTML = `
+            <div class="save-card-img">
+                <img src="/Images/apartment1.jpg" alt="img" draggable="false">
+            </div>
+            <div class="save-card-content">
+                <div class="save-card-details">
+                    <h3>${item.name}</h3>
+                    <h3>${item.price}</h3>
+                </div>
+                <div class="save-card-address">
+                    <p>${item.location}</p>
+                </div>
+                <div class="save-card-btns">
+                    <button class="save-book-btn">Book Now</button>
+                    <button class="remove-btn">Remove</button>
+                </div>
+            </div>
+        `;
+
+        // Attach event listener to the "Remove" button
+        const removeButton = saveCard.querySelector('.remove-btn');
+        removeButton.addEventListener('click', function() {
+            // Remove item from localStorage and DOM
+            removeItemFromLocalStorage(item.id);
+            saveCard.remove();
+        });
+
+        return saveCard;
+    }
+
+    // Function to remove an item from localStorage
+    function removeItemFromLocalStorage(itemId) {
+        const savedItems = JSON.parse(localStorage.getItem('savedItems')) || [];
+        const updatedItems = savedItems.filter(item => item.id !== itemId);
+        localStorage.setItem('savedItems', JSON.stringify(updatedItems));
+    }
+
+    // Call renderSavedProducts when the page loads to display saved items
+    renderSavedProducts();
+});
+
+    </script>
 </body>
 </html>

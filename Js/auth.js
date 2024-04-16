@@ -14,5 +14,13 @@ const storeCredentials = (username, email, password) => {
       return false;
     }
   };
+
+
+  const clearCredentials = () => {
+    localStorage.removeItem('username');
+    localStorage.removeItem('email');
+    localStorage.removeItem('password');
+  };
+
   
-  export { storeCredentials, authenticateUser };
+  export { storeCredentials, authenticateUser, clearCredentials };
