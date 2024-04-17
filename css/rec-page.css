@@ -193,6 +193,12 @@ button.back-btn{
     margin: 2rem 0;
 }
 
+@media screen and (min-width: 1024px) {
+    .apartment-comp{
+        margin: 0 7rem;
+    }
+}
+
 .save-card {
     width: 380px;
     height: auto;

@@ -197,6 +197,12 @@ button.back-btn{
     margin-bottom: 3rem;
 }
 
+@media screen and (min-width: 1024px) {
+    .container{
+        justify-content: space-evenly;
+    }
+}
+
 .card {
     width: 450px;
     height: auto;

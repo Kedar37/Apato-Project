@@ -196,7 +196,9 @@ button.back-btn{
     justify-content: space-between;
     gap: 1.5rem;
     margin: 4rem 0;
-  }
+}
+
+
   
   .image-container{
     width: 650px;
@@ -284,6 +286,19 @@ button.back-btn{
     margin-top: auto;
 }
 
+@media screen and (min-width: 1024px) {
+    .main-container{
+        justify-content: space-evenly;
+    }
+
+    .apart-details{
+        width: 500px;
+    }
+
+    .container{
+        width: 700px;
+    }
+}
 
 
 .date-schedule{

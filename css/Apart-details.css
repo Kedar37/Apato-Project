@@ -169,6 +169,13 @@ ul.menulists>li:hover {
      position: relative;
      overflow: hidden;
   }
+
+  @media screen and (min-width: 1024px) {
+    .container{
+        width: 750px;
+    }
+  }
+
   .container img{
      width: 100%;
      height: 100%;
@@ -282,6 +289,7 @@ ul.menulists>li:hover {
     width: 450px;
 }
 
+
 .map{
     width: 600px;
     height: 500px;
@@ -289,9 +297,19 @@ ul.menulists>li:hover {
 }
 
 .map > img{
-    width: 600px;
-    height: 500px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+}
+
+@media screen and (min-width: 1024px) {
+    .apart-info{
+        width: 600px;
+    }
+
+    .map{
+        width: 900px;
+    }
 }
 
 
@@ -382,6 +400,7 @@ ul.menulists>li:hover {
 .wrapper {
     max-width: 1100px;
     width: 100%;
+    margin: 0 auto;
     position: relative;
 }
 
