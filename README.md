@@ -1,2 +1,2 @@
 # Apato-Project
-han and kedar are working together on this project!!!!!
+Created Apartment rental e-commerce website using html, css, and javascript!
